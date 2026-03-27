@@ -1,34 +1,17 @@
-# Penny Lane Financial Planner -- Claude Code Workshop
+# All You Need is Claude -- Claude Code Workshop
 
 A hands-on workshop for learning Claude Code through building a personal
 finance application.
 
-## Prerequisites
-
-- Python 3.12+
-- Node.js 18+ (for Claude Code)
-- A GitHub account (for tier 3 PR exercise)
-
 ## Setup
 
-### 1. Install uv
+If you followed the prep guide, you already have everything you need
+(`uv`, `gh`, Claude Code). Just clone and verify:
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-### 2. Install Claude Code
-
-```bash
-npm install -g @anthropic-ai/claude-code
-```
-
-### 3. Clone and verify
-
-```bash
-git clone <repo-url>
-cd claude-code-workshop
-cd tier1-budget-tracker && uv sync && cd ..
+gh repo clone <org>/claude-code-workshop
+cd claude-code-workshop/tier1-budget-tracker
+uv sync
 uv run python -c "import fastapi; print('Ready!')"
 ```
 
