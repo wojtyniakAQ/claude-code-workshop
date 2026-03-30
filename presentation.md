@@ -62,10 +62,11 @@ Good workflow for a new project:
 
 *Take a sad codebase and make it better*
 
-Always start complex work in plan mode (`/plan`):
+**Rule of thumb**: use `/plan` for anything more complex than ~25 lines of change.
 - Claude reads the codebase, asks clarifying questions, proposes an approach
 - You review and adjust *before* any code is written
 - Cheap to throw away a plan, expensive to throw away code
+- Plans persist in files -- if the conversation gets long, `/compact` won't lose your plan
 
 Don't get attached to code. Get attached to:
 - **Business logic** -- the rules and decisions
@@ -167,6 +168,34 @@ Claude Code remembers across conversations:
 Stored in `~/.claude/` and `.claude/` -- just markdown files you can read and edit.
 
 Tell Claude "remember this" and it will. Tell it "forget that" and it does.
+
+---
+
+## Getting Better
+
+*It's getting better all the time*
+
+### Screenshots and images
+
+- Paste a screenshot, ask Claude to reproduce the UI or debug what's on screen
+- Works with diagrams, mockups, error popups -- anything visual
+
+### Subagents
+
+- Claude can spin up parallel workers to research, search, or explore
+- "Find all the places we use this pattern" -- dispatches agents across the codebase
+- You stay in one conversation while they fan out
+
+### Context management
+
+- Conversations get long. Use `/compact` to compress and keep going.
+- Best practice: write your plan to a file *first*, then `/compact` -- the plan survives because it's on disk, not just in context
+- Switch to the 1M context model (`/model opus 1m`) for large codebases or long sessions
+
+### One-off scripts
+
+- Claude can write and run throwaway scripts for itself: data migration, log parsing, API exploration
+- It writes the script, runs it, reads the output, deletes it -- you never see the code unless you want to
 
 ---
 
