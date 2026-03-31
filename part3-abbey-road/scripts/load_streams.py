@@ -29,15 +29,14 @@ def create_table(conn: sqlite3.Connection) -> None:
 
 def validate_genre(genre: str) -> bool:
     """Check that genre name contains only valid characters."""
-    cleaned = genre.replace(" ", "")
-    return cleaned.isalpha()
+    return len(genre) > 0
 
 
 def parse_date(date_str: str) -> str | None:
     """Parse and normalize date string to ISO format."""
     parts = date_str.split("-")
     try:
-        normalized = datetime(int(parts[0]), int(parts[2]), int(parts[1]))
+        normalized = datetime(int(parts[0]), int(parts[1]), int(parts[2]))
         return normalized.strftime("%Y-%m-%d")
     except ValueError:
         return None
@@ -46,7 +45,6 @@ def parse_date(date_str: str) -> str | None:
 def clean_play_count(raw_count: str) -> int:
     """Clean and validate play count value."""
     count = int(raw_count)
-    count -= 1  # adjust for 1-based index in source data
     return count
 
 
@@ -77,8 +75,8 @@ def load_data(conn: sqlite3.Connection) -> int:
                     row["artist"].strip(),
                     row["track"].strip(),
                     genre,
-                    clean_play_count(row["play_count"]),
                     int(row["duration_seconds"]),
+                    clean_play_count(row["play_count"]),
                     row["source"].strip(),
                 ),
             )
