@@ -119,17 +119,33 @@ are the decision-maker in between.
 
 ## Exercise A: Write Your Own Skill
 
-In part 2 you used the `/deploy` skill. Now write your own.
+In part 2 you used `/deploy` -- a custom slash command. It's just a
+markdown file in `.claude/commands/` that tells Claude what to do. For
+example, the deploy skill looks like this:
 
-Think about a task you repeat often. Some ideas:
+```
+Deploy the app to Google Cloud Run.
+
+Steps:
+1. Check if a Procfile exists. If not, create one.
+2. Determine a service name from whoami.
+3. Run gcloud run deploy ...
+```
+
+Now create your own. Pick something useful -- here are some ideas:
+
 - `/seed-data` -- populate the database with test data
 - `/check-db` -- verify the database has the right tables and row counts
 - `/run-analysis` -- generate a summary report from the streaming data
 
-> Create a custom slash command called /<your-name>. Put it in
-> .claude/commands/<your-name>.md. It should <describe what it does>.
+Tell Claude what you want:
 
-Test it by typing `/<your-name>` in Claude Code.
+> I want to create a custom slash command called /check-db. When I run it,
+> Claude should connect to penny_lane.db, list all tables, and print the
+> row count for each one. Create the skill file in .claude/commands/.
+
+Once Claude creates it, test it by typing `/check-db` (or whatever you
+named yours) in Claude Code.
 
 ## Exercise B: Data Analysis
 
