@@ -8,16 +8,8 @@ not just paste a prompt.
 
 ## Before you start
 
-You need your working app from tier 1. Either:
-
-- **Option A**: Keep working in your tier 1 directory. Just read these
-  instructions from here.
-- **Option B**: Copy your app into this directory:
-
 ```bash
-cp ../tier1-budget-tracker/app.py .
-cp -r ../tier1-budget-tracker/templates .
-cp ../tier1-budget-tracker/penny_lane.db .
+cd tier2-magical-mystery-setlist
 uv sync
 ```
 
@@ -25,7 +17,7 @@ uv sync
 
 In tier 1 you had a detailed PRD and a ready-made CLAUDE.md. This time you
 only have **BRIEF.md** -- a vague product idea. Your job is to work with
-Claude to turn that into a real feature.
+Claude to turn that into a real app.
 
 ---
 
@@ -41,10 +33,12 @@ Review what it produces -- push back if something is off.
 
 ## Step 2: Create a CLAUDE.md (~2 min)
 
-Your project has conventions but no CLAUDE.md. Ask Claude to infer one:
+This project has no CLAUDE.md. Ask Claude to create one based on
+the tech stack and your preferences:
 
-> Look at the existing code and create a CLAUDE.md file that documents the
-> project conventions, tech stack, and patterns you see.
+> Create a CLAUDE.md for this project. We are using Python 3.12, FastAPI,
+> Jinja2, SQLite (raw sql, no ORM), and Plotly.js via CDN. Keep the app
+> in a single file. Add any conventions you think are important.
 
 Review what it writes. Add or remove anything that does not match your
 preferences.
@@ -55,27 +49,23 @@ Use plan mode to design the approach before writing code:
 
 > /plan
 
-Tell Claude what you want to build (the savings projection). Review the plan.
-Is the approach reasonable? Ask it to adjust if needed. Approve the plan when
-you are satisfied.
+Tell Claude what you want to build. Review the plan. Is the approach
+reasonable? Ask it to adjust if needed. Approve the plan when you are
+satisfied.
 
-## Step 4: Build the savings projection (~7 min)
+## Step 4: Build it (~7 min)
 
 Let Claude implement the plan. Watch what it does. If you disagree with a
 choice, speak up -- do not wait until the end.
 
-Run the app and test it:
-
-```bash
-uv run uvicorn app:app --reload
-```
+Claude should start the server for you. Open http://localhost:8000 and test.
 
 ## Step 5: Add tests (~3 min)
 
-Ask Claude to write tests for the calculation logic:
+Ask Claude to write tests for the core logic:
 
-> Write pytest tests for the savings projection calculations. Cover edge
-> cases like zero income, negative savings rate, and very high inflation.
+> Write pytest tests for the setlist logic. Cover edge cases like an empty
+> setlist, a set that exceeds the time limit, and reordering songs.
 
 Run them:
 
@@ -87,15 +77,14 @@ If any fail, describe the failures to Claude and iterate.
 
 ## Step 6: Build your own feature (remaining time)
 
-Look at BRIEF.md again -- it mentions "one more feature of your choosing."
-What would make this app more useful? Tell Claude your idea and build it
-together.
+What would make this app more fun or useful? Tell Claude your idea and
+build it together.
 
 Some ideas if you are stuck:
-- Recurring expenses (rent, subscriptions) that auto-populate each month
-- Expense trends over time (bar chart of spending by month)
-- CSV export of all transactions
-- Budget limits per category with warnings
+- Encore management (separate encore section with its own time budget)
+- Song search/filter by genre, tempo, or duration
+- Export setlist as a shareable link or printable page
+- "Suggest a setlist" that auto-fills based on constraints
 
 ## Reflect
 
@@ -106,5 +95,4 @@ Compare this experience to tier 1:
 
 ## Done?
 
-When you have a working savings projection and a feature worth pitching,
-move to **tier3-dev-workflows**.
+When you have a working setlist builder, move to **tier3-dev-workflows**.

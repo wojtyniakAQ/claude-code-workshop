@@ -59,4 +59,4 @@ Describe the problem to Claude Code. Do not edit code yourself. Examples:
 
 ## Done?
 
-When you have a working budget tracker, move to **tier2-savings-copilot**.
+When you have a working budget tracker, move to **tier2-magical-mystery-setlist**.

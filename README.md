@@ -1,7 +1,7 @@
 # All You Need is Claude -- Claude Code Workshop
 
-A hands-on workshop for learning Claude Code through building a personal
-finance application.
+A hands-on workshop for learning Claude Code through building web
+applications.
 
 ## Setup
 
@@ -22,7 +22,7 @@ Work through the tiers in order. Each builds on the previous one.
 | Tier | Directory | Time | What you learn |
 |------|-----------|------|----------------|
 | 1 | `tier1-budget-tracker/` | ~15 min | Claude Code basics: paste a prompt, get a working app |
-| 2 | `tier2-savings-copilot/` | ~20 min | Collaborative workflow: write PRDs, use /plan, add tests |
+| 2 | `tier2-magical-mystery-setlist/` | ~20 min | Collaborative workflow: write PRDs, use /plan, add tests |
 | 3 | `tier3-dev-workflows/` | ~20 min | Developer workflows: debugging, git, custom commands, data analysis |
 
 Each tier has its own `INSTRUCTIONS.md` with step-by-step guidance. Start
