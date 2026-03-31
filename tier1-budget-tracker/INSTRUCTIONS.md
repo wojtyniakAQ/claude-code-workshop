@@ -38,17 +38,12 @@ Then paste this prompt:
 > pie chart of spending by category, total income, total expenses, net
 > savings, and a table of all expenses. Make it clean and modern.
 
-Wait for Claude to finish. It will create `app.py` and HTML templates.
-
-## Run it
-
-```bash
-uv run uvicorn app:app --reload
-```
-
-Open http://localhost:8000 in your browser.
+Wait for Claude to finish. It will create `app.py`, HTML templates, and
+start the server for you.
 
 ## Try it
+
+Open http://localhost:8000 in your browser.
 
 - Set your monthly income
 - Add a few expenses with different categories (rent, food, transport, etc.)

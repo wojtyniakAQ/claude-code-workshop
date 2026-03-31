@@ -19,10 +19,17 @@ See PRD.md for full product requirements.
 - Store the SQLite database as `penny_lane.db` in the project root.
 - Use raw SQL via `sqlite3` -- do not introduce SQLAlchemy or any ORM.
 - Run the app with: `uv run uvicorn app:app --reload`
+- After building the app, start the server automatically so the user can test right away.
 
 ## Code style
 
 - Type hints on all function signatures.
 - No inline imports -- all imports at the top of the file.
 - Keep functions short and focused. Prefer clarity over cleverness.
+
+## Important
+
+- Before using any library API, check the installed version and verify the
+  usage matches that version's API. Library APIs change between major
+  versions -- do not assume the latest docs apply.
 
