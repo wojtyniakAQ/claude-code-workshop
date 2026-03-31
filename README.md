@@ -10,23 +10,23 @@ If you followed the prep guide, you already have everything you need
 
 ```bash
 gh repo clone <org>/claude-code-workshop
-cd claude-code-workshop/tier1-budget-tracker
+cd claude-code-workshop/part1-penny-lane
 uv sync
 uv run python -c "import fastapi; print('Ready!')"
 ```
 
-## Workshop Tiers
+## Workshop Parts
 
-Work through the tiers in order. Each builds on the previous one.
+Work through the parts in order.
 
-| Tier | Directory | Time | What you learn |
-|------|-----------|------|----------------|
-| 1 | `tier1-budget-tracker/` | ~15 min | Claude Code basics: paste a prompt, get a working app |
-| 2 | `tier2-magical-mystery-setlist/` | ~20 min | Collaborative workflow: write PRDs, use /plan, add tests |
-| 3 | `tier3-dev-workflows/` | ~20 min | Developer workflows: debugging, git, custom commands, data analysis |
+| Part | Directory | What you learn |
+|------|-----------|----------------|
+| 1 | `part1-penny-lane/` | Claude Code basics: paste a prompt, get a working app |
+| 2 | `part2-magical-mystery-tour/` | Collaborative workflow: write PRDs, use /plan, add tests, deploy |
+| 3 | `part3-abbey-road/` | Developer workflows: debugging, git, custom commands, data analysis |
 
-Each tier has its own `INSTRUCTIONS.md` with step-by-step guidance. Start
-with tier 1.
+Each part has its own `INSTRUCTIONS.md` with step-by-step guidance. Start
+with part 1.
 
 ## Running the app
 
@@ -48,10 +48,9 @@ Then open http://localhost:8000 in your browser.
 
 ## Facilitator notes
 
-- **Show and tell after tier 1** (~2 min): Ask 1-2 people to share their
-  screen. Dashboards will look different based on prompting style -- point
-  that out.
+- **Show and tell after part 1**: Ask 1-2 people to share their screen.
+  Dashboards will look different based on prompting style -- point that out.
 - **Float during exercises**: Circulate and help people who are stuck,
   especially non-technical participants. Nudge on prompt phrasing.
-- **Bug hunt debrief in tier 3**: After the parser exercise, quick show of
+- **Bug hunt debrief in part 3**: After the parser exercise, quick show of
   hands -- "Who found all 4 bugs?" Discuss the ones people missed.

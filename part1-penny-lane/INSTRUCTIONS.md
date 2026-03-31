@@ -1,6 +1,5 @@
-# Tier 1: Follow the Recipe
+# Part 1: Penny Lane
 
-**Time**: ~15 minutes
 **Goal**: Learn Claude Code mechanics by building a working app from a single prompt.
 
 ---
@@ -8,7 +7,7 @@
 ## Before you start
 
 ```bash
-cd tier1-budget-tracker
+cd part1-penny-lane
 uv sync
 ```
 
@@ -59,4 +58,4 @@ Describe the problem to Claude Code. Do not edit code yourself. Examples:
 
 ## Done?
 
-When you have a working budget tracker, move to **tier2-magical-mystery-setlist**.
+When you have a working budget tracker, move to **part2-magical-mystery-tour**.

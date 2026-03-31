@@ -1,6 +1,5 @@
-# Tier 2: Build with Claude as Your Co-pilot
+# Part 2: Magical Mystery Tour
 
-**Time**: ~20 minutes
 **Goal**: Work WITH Claude to define requirements, plan, build, and test --
 not just paste a prompt.
 
@@ -9,21 +8,21 @@ not just paste a prompt.
 ## Before you start
 
 ```bash
-cd tier2-magical-mystery-setlist
+cd part2-magical-mystery-tour
 uv sync
 ```
 
 ## What is different this time
 
-In tier 1 you had a detailed PRD and a ready-made CLAUDE.md. This time you
+In part 1 you had a detailed PRD and a ready-made CLAUDE.md. This time you
 only have **BRIEF.md** -- a vague product idea. Your job is to work with
 Claude to turn that into a real app.
 
 ---
 
-## Step 1: Write a PRD with Claude (~5 min)
+## Step 1: Write a PRD with Claude
 
-Read BRIEF.md yourself first. Then switch to plan mode (`/plan`) and ask 
+Read BRIEF.md yourself first. Then switch to plan mode (`/plan`) and ask
 Claude to help you flesh it out:
 
 > Read BRIEF.md. Help me turn this into a detailed product requirements
@@ -33,7 +32,7 @@ Claude to help you flesh it out:
 Answer Claude's questions. Let it write PRD.md when you are both aligned.
 Review what it produces -- push back if something is off.
 
-## Step 2: Create a CLAUDE.md (~2 min)
+## Step 2: Create a CLAUDE.md
 
 This project has no CLAUDE.md. Ask Claude to create one based on
 the tech stack and your preferences:
@@ -45,7 +44,7 @@ the tech stack and your preferences:
 Review what it writes. Add or remove anything that does not match your
 preferences.
 
-## Step 3: Plan before building (~3 min)
+## Step 3: Plan before building
 
 Use plan mode to design the approach before writing code:
 
@@ -55,14 +54,14 @@ Tell Claude what you want to build. Review the plan. Is the approach
 reasonable? Ask it to adjust if needed. Approve the plan when you are
 satisfied.
 
-## Step 4: Build it (~7 min)
+## Step 4: Build it
 
 Let Claude implement the plan. Watch what it does. If you disagree with a
 choice, speak up -- do not wait until the end.
 
 Claude should start the server for you. Open http://localhost:8000 and test.
 
-## Step 5: Add tests (~3 min)
+## Step 5: Add tests
 
 Ask Claude to write tests for the core logic:
 
@@ -77,7 +76,7 @@ uv run pytest
 
 If any fail, describe the failures to Claude and iterate.
 
-## Step 6: Build your own feature (remaining time)
+## Step 6: Build your own feature
 
 What would make this app more fun or useful? Tell Claude your idea and
 build it together.
@@ -88,7 +87,7 @@ Some ideas if you are stuck:
 - Export setlist as a shareable link or printable page
 - "Suggest a setlist" that auto-fills based on constraints
 
-## Step 7: Deploy it (~2 min)
+## Step 7: Deploy it
 
 Ship your app to the cloud using the `/deploy` skill:
 
@@ -101,11 +100,11 @@ Share it with the room.
 
 ## Reflect
 
-Compare this experience to tier 1:
+Compare this experience to part 1:
 - What was different about collaborating vs. pasting a prompt?
 - Did the PRD and planning steps change the quality of the output?
 - How did writing tests affect your confidence in the code?
 
 ## Done?
 
-When you have a working setlist builder, move to **tier3-dev-workflows**.
+When you have a working setlist builder, move to **part3-abbey-road**.
