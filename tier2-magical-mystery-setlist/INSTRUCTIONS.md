@@ -23,7 +23,8 @@ Claude to turn that into a real app.
 
 ## Step 1: Write a PRD with Claude (~5 min)
 
-Read BRIEF.md yourself first. Then ask Claude to help you flesh it out:
+Read BRIEF.md yourself first. Then switch to plan mode (`/plan`) and ask 
+Claude to help you flesh it out:
 
 > Read BRIEF.md. Help me turn this into a detailed product requirements
 > document. Before writing anything, ask me questions about what I want.
