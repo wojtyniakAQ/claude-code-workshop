@@ -9,7 +9,7 @@ If you followed the prep guide, you already have everything you need
 (`uv`, `gh`, Claude Code). Just clone and verify:
 
 ```bash
-gh repo clone <org>/claude-code-workshop
+git clone https://github.com/wojtyniakAQ/claude-code-workshop
 cd claude-code-workshop/part1-penny-lane
 uv sync
 uv run python -c "import fastapi; print('Ready!')"
