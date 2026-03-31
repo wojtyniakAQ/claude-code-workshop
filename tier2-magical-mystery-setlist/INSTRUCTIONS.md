@@ -88,6 +88,17 @@ Some ideas if you are stuck:
 - Export setlist as a shareable link or printable page
 - "Suggest a setlist" that auto-fills based on constraints
 
+## Step 7: Deploy it (~2 min)
+
+Ship your app to the cloud using the `/deploy` skill:
+
+> /deploy
+
+This creates a `Procfile`, deploys to Cloud Run, and gives you a live URL.
+Share it with the room.
+
+---
+
 ## Reflect
 
 Compare this experience to tier 1:

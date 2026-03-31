@@ -64,15 +64,19 @@ Re-run the script after each fix and verify the data improves.
 
 ---
 
-## Exercise A: Custom Slash Command (~5 min)
+## Exercise A: Write Your Own Skill (~5 min)
 
-Create a Claude Code command that checks your app's health:
+In tier 2 you used the `/deploy` skill. Now write your own.
 
-> Create a custom slash command called /healthcheck. It should verify that
-> penny_lane.db exists, list all tables, and report the row count in each
-> table. Put it in .claude/commands/healthcheck.md.
+Think about a task you repeat often. Some ideas:
+- `/seed-data` -- populate the database with test data
+- `/check-db` -- verify the database has the right tables and row counts
+- `/run-analysis` -- generate a summary report from the streaming data
 
-Test it by typing `/healthcheck` in Claude Code.
+> Create a custom slash command called /<your-name>. Put it in
+> .claude/commands/<your-name>.md. It should <describe what it does>.
+
+Test it by typing `/<your-name>` in Claude Code.
 
 ## Exercise B: Create a PR (~5 min)
 
@@ -92,18 +96,6 @@ Use Claude as an analytical tool. Ask it questions about the streaming data:
 - "Which month had the most total plays?"
 
 Watch how Claude writes and runs SQL on the fly.
-
-## Exercise D: Ship It (~5 min)
-
-Deploy your app so anyone can see it:
-
-> Deploy this app to Cloud Run. Use the default project. Make it publicly
-> accessible.
-
-If it works, you now have a live URL. Share it with the room.
-
-You just built, debugged, and shipped a web app in 90 minutes -- without
-editing a single line of code by hand.
 
 ## Bonus: Streaming Analytics Page
 

@@ -4,3 +4,4 @@ __pycache__/
 .uv/
 penny_lane.db
 uv.lock
+infra/
