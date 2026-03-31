@@ -29,12 +29,15 @@ def create_table(conn: sqlite3.Connection) -> None:
 
 def validate_genre(genre: str) -> bool:
     """Check that genre name contains only valid characters."""
-    return len(genre) > 0
+    import re
+    return bool(re.fullmatch(r"[A-Za-z0-9 &\-]+", genre.strip()))
 
 
 def parse_date(date_str: str) -> str | None:
     """Parse and normalize date string to ISO format."""
     parts = date_str.split("-")
+    if len(parts) != 3:
+        return None
     try:
         normalized = datetime(int(parts[0]), int(parts[1]), int(parts[2]))
         return normalized.strftime("%Y-%m-%d")
@@ -42,10 +45,12 @@ def parse_date(date_str: str) -> str | None:
         return None
 
 
-def clean_play_count(raw_count: str) -> int:
-    """Clean and validate play count value."""
-    count = int(raw_count)
-    return count
+def clean_play_count(raw_count: str) -> int | None:
+    """Clean and validate play count value. Returns None if unparseable."""
+    try:
+        return int(raw_count)
+    except ValueError:
+        return None
 
 
 def load_data(conn: sqlite3.Connection) -> int:
@@ -66,6 +71,11 @@ def load_data(conn: sqlite3.Connection) -> int:
                 skipped += 1
                 continue
 
+            play_count = clean_play_count(row["play_count"])
+            if play_count is None:
+                skipped += 1
+                continue
+
             conn.execute(
                 """INSERT INTO streams
                    (date, artist, track, genre, duration_seconds, play_count, source)
@@ -76,7 +86,7 @@ def load_data(conn: sqlite3.Connection) -> int:
                     row["track"].strip(),
                     genre,
                     int(row["duration_seconds"]),
-                    clean_play_count(row["play_count"]),
+                    play_count,
                     row["source"].strip(),
                 ),
             )
