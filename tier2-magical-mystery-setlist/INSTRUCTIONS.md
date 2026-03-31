@@ -28,6 +28,7 @@ Claude to help you flesh it out:
 
 > Read BRIEF.md. Help me turn this into a detailed product requirements
 > document. Before writing anything, ask me questions about what I want.
+> Save the results in PRD.md
 
 Answer Claude's questions. Let it write PRD.md when you are both aligned.
 Review what it produces -- push back if something is off.
