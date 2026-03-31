@@ -58,6 +58,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-01-22,Phoebe Bridgers,I Know the End,Indie,190,325,search
 2025-01-22,Tyler the Creator,NEW MAGIC WAND,Hip-Hop,297,1221,playlist
 2025-01-23,Alfa Mist,Mulago,Jazz,390,116,album
+2025-01-23,The Beatles,Let It Be,Rock,243,18380,radio
 2025-01-24,Olivia Rodrigo,vampire,Pop,208,1940,search
 2025-01-24,Led Zeppelin,Whole Lotta Love,Rock,271,411,album
 2025-01-25,Arctic Monkeys,R U Mine,Rock,221,165,radio
@@ -134,6 +135,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-02-17,Phoebe Bridgers,Motion Sickness,Indie,234,258,album
 2025-02-17,Taylor Swift,Cruel Summer,Pop,169,440,search
 2025-02-17,J. Cole,PRIDE is the Devil,Hip-Hop,284,905,playlist
+2025-02-17,The Beatles,Ticket to Ride,Rock,191,23351,radio
 2025-02-18,Tyler the Creator,See You Again,Hip-Hop,258,858,playlist
 2025-02-18,Jamie xx,Sleep Sound,Electronic,400,172,radio
 2025-02-19,J. Cole,PRIDE is the Devil,Hip-Hop,206,1294,album
@@ -162,6 +164,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-02-28,J. Cole,No Role Modelz,Hip-Hop,252,1415,playlist
 2025-02-28,Led Zeppelin,Kashmir,Rock,323,345,playlist
 2025-03-01,Yuja Wang,Islamey,Classical,855,10,search
+2025-03-01,The Beatles,Blackbird,Rock,138,42434,playlist
 2025-03-02,SZA,Kiss Me More,Hip-Hop,217,1370,radio
 2025-03-02,Daniel Caesar,Best Part,R&B,289,702,playlist
 2025-03-02,Frank Ocean,Pink + White,R&B,196,539,playlist
@@ -210,6 +213,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-03-16,Nubya Garcia,Together Is a Beautiful Place to Be,Jazz,566,125,album
 2025-03-16,SZA,Kill Bill,Hip-Hop,274,741,search
 2025-03-17,Drake,Hotline Bling,Hip-Hop,185,366,radio
+2025-03-17,The Beatles,Something,Rock,182,18103,radio
 2025-03-18,Phoebe Bridgers,Motion Sickness,Indie,258,80,search
 2025-03-18,Drake,One Dance,Hip-Hop,233,1016,playlist
 2025-03-18,Kendrick Lamar,HUMBLE,Hip-Hop,292,1013,search
@@ -251,10 +255,12 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-04-03,Taylor Swift,Shake It Off,Pop,237,1983,playlist
 2025-04-03,Jamie xx,Gosh,Electronic,380,341,playlist
 2025-04-03,Drake,Gods Plan,Hip-Hop,273,1496,album
+2025-04-03,The Beatles,Eleanor Rigby,Rock,128,21029,search
 2025-04-04,Phoebe Bridgers,Kyoto,Indie,241,152,album
 2025-04-05,Yuja Wang,Piano Concerto No 2,Classical,757,362,radio
 2025-04-07,J. Cole,Middle Child,Hip-Hop,192,465,playlist
 2025-04-07,SZA,Kill Bill,Hip-Hop,227,208,playlist
+2025-04-07,The Beatles,Strawberry Fields Forever,Rock,247,19740,playlist
 2025-04-08,Foo Fighters,The Pretender,Rock,401,296,radio
 2025-04-08,Disclosure,Magnets,Electronic,405,109,playlist
 2025-04-08,SZA,Kiss Me More,Hip-Hop,242,465,search
@@ -305,6 +311,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-04-26,Bonobo,Bambro Koyo Ganda,Electronic,368,126,search
 2025-04-27,Alfa Mist,Run Outs,Jazz,557,63,radio
 2025-04-28,J. Cole,No Role Modelz,Hip-Hop,170,963,search
+2025-04-28,The Beatles,All You Need Is Love,Rock,237,22002,playlist
 2025-04-29,Kendrick Lamar,HUMBLE,Hip-Hop,205,1005,album
 2025-04-29,Jorja Smith,Be Honest,R&B,267,443,radio
 2025-04-30,boy pablo,Dance Baby,Indie,319,151,playlist
@@ -344,9 +351,11 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-05-12,Radiohead,Creep,Rock,240,106,search
 2025-05-13,Led Zeppelin,Whole Lotta Love,Rock,260,439,search
 2025-05-14,Disclosure,Magnets,Electronic,365,206,playlist
+2025-05-14,The Beatles,Hey Jude,Rock,431,17657,radio
 2025-05-15,SZA,Kill Bill,Hip-Hop,207,1456,album
 2025-05-16,Taylor Swift,Cruel Summer,Pop,242,725,playlist
 2025-05-16,Bonobo,Kerala,Electronic,386,109,search
+2025-05-16,The Beatles,Here Comes the Sun,Rock,185,43880,radio
 2025-05-17,Foo Fighters,Learn to Fly,Rock,276,91,search
 2025-05-18,Olivia Rodrigo,drivers license,Pop,185,329,search
 2025-05-18,Jamie xx,Gosh,Electronic,273,64,radio
@@ -363,10 +372,12 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-05-22,The Rolling Stones,Paint It Black,Rock,413,430,search
 2025-05-22,Arctic Monkeys,R U Mine,Rock,314,311,album
 2025-05-24,Foo Fighters,Learn to Fly,Rock,239,263,liked
+2025-05-24,The Beatles,Come Together,Rock,259,33631,radio
 2025-05-25,Bonobo,Kerala,Electronic,369,384,search
 2025-05-25,Lang Lang,Hungarian Rhapsody No 2,Classical,609,39,playlist
 2025-05-25,Harry Styles,Adore You,Pop,230,1424,radio
 2025-05-25,The Weeknd,Save Your Tears,Pop,196,935,search
+2025-05-25,The Beatles,Yesterday,Rock,125,27250,search
 2025-05-26,Led Zeppelin,Kashmir,Rock,217,310,album
 2025-05-26,The Weeknd,Starboy,Pop,263,1786,playlist
 2025-05-26,Harry Styles,Watermelon Sugar,Pop,177,1990,radio
@@ -600,6 +611,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-08-11,The Weeknd,Save Your Tears,Pop,267,753,search
 2025-08-11,Bonobo,Kerala,Electronic,343,5321,album
 2025-08-11,Drake,Hotline Bling,Hip-Hop,266,1324,liked
+2025-08-12,The Beatles,Twist and Shout,Rock,155,20812,radio
 2025-08-13,Clairo,Sofia,Indie,266,176,playlist
 2025-08-14,Foo Fighters,Everlong,Rock,402,449,radio
 2025-08-14,Arctic Monkeys,505,Rock,255,147,playlist
@@ -610,6 +622,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-08-15,ODESZA,A Moment Apart,Electronic,309,163,album
 2025-08-15,Frank Ocean,Nights,R&B,278,243,search
 2025-08-15,Radiohead,Creep,Rock,251,205,radio
+2025-08-15,The Beatles,In My Life,Rock,147,33364,search
 2025-08-16,Harry Styles,As It Was,Pop,205,471,search
 2025-08-16,Arctic Monkeys,Do I Wanna Know,Rock,302,296,playlist
 2025-08-16,Steve Lacy,Bad Habit,R&B,210,610,liked
@@ -642,6 +655,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-08-29,Phoebe Bridgers,Kyoto,Indie,298,342,radio
 2025-08-29,Daniel Caesar,Best Part,R&B,264,603,liked
 2025-08-29,Jamie xx,Loud Places,Electronic,444,291,radio
+2025-08-29,The Beatles,A Hard Days Night,Rock,154,27054,playlist
 2025-08-30,Tame Impala,Feels Like We Only Go Backwards,Indie,323,120,playlist
 2025-08-30,Arctic Monkeys,R U Mine,Rock,233,349,radio
 2025-08-30,Tame Impala,The Less I Know the Better,Indie,289,246,search
@@ -680,12 +694,14 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-09-09,Harry Styles,As It Was,Pop,255,1075,radio
 2025-09-09,Clairo,Pretty Girl,Indie,254,54,search
 2025-09-09,Phoebe Bridgers,Motion Sickness,Indie,306,111,liked
+2025-09-09,The Beatles,Norwegian Wood,Rock,122,19913,search
 2025-09-10,Led Zeppelin,Whole Lotta Love,Rock,274,149,radio
 2025-09-10,Phoebe Bridgers,I Know the End,Indie,208,289,playlist
 2025-09-10,The Rolling Stones,Sympathy for the Devil,Rock,205,118,album
 2025-09-10,Jorja Smith,Blue Lights,R&B,180,397,playlist
 2025-09-10,SZA,Kill Bill,Hip-Hop,199,204,playlist
 2025-09-10,Clairo,Sofia,Indie,315,95,search
+2025-09-10,The Beatles,While My Guitar Gently Weeps,Rock,284,17372,search
 2025-09-11,Kendrick Lamar,Money Trees,Hip-Hop,299,383,album
 2025-09-11,Led Zeppelin,Stairway to Heaven,Rock,253,496,radio
 2025-09-12,SZA,Good Days,Hip-Hop,265,566,playlist
@@ -703,6 +719,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-09-17,Jorja Smith,On My Mind,R&B,184,676,search
 2025-09-17,The Rolling Stones,Sympathy for the Devil,Rock,209,230,album
 2025-09-18,The Rolling Stones,Paint It Black,Rock,278,103,album
+2025-09-18,The Beatles,Get Back,Rock,190,27877,search
 2025-09-19,Dua Lipa,New Rules,Pop,252,462,search
 2025-09-19,Disclosure,White Noise,Electronic,436,341,playlist
 2025-09-19,Olivia Rodrigo,drivers license,Pop,213,450,playlist
@@ -778,6 +795,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-10-15,The Weeknd,Save Your Tears,Pop,156,789,album
 2025-10-15,Olivia Rodrigo,vampire,Pop,154,1385,playlist
 2025-10-15,Bonobo,Bambro Koyo Ganda,Electronic,378,135,liked
+2025-10-15,The Beatles,Across the Universe,Rock,229,41798,radio
 2025-10-16,Clairo,Bags,Indie,189,208,playlist
 2025-10-16,Olivia Rodrigo,vampire,Pop,234,546,liked
 2025-10-17,Mac DeMarco,Chamber of Reflection,Indie,210,335,playlist
@@ -924,6 +942,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-12-03,Kamasi Washington,Fists of Fury,Jazz,323,55,search
 2025-12-03,Drake,One Dance,Hip-Hop,253,1358,playlist
 2025-12-03,Foo Fighters,Learn to Fly,Rock,340,427,radio
+2025-12-03,The Beatles,Penny Lane,Rock,180,38835,playlist
 2025-12-04,Tyler the Creator,See You Again,Hip-Hop,245,1253,search
 2025-12-04,Olivia Rodrigo,good 4 u,Pop,226,351,search
 2025-12-04,Radiohead,No Surprises,Rock,378,80,radio
@@ -988,6 +1007,7 @@ date,artist,track,genre,duration_seconds,play_count,source
 2025-12-27,Led Zeppelin,Kashmir,Rock,237,119,search
 2025-12-27,Drake,One Dance,Hip-Hop,239,1063,playlist
 2025-12-28,J. Cole,PRIDE is the Devil,Hip-Hop,207,1153,search
+2025-12-28,The Beatles,Help!,Rock,139,40614,radio
 2025-12-29,SZA,Kiss Me More,Hip-Hop,253,1220,search
 2025-12-29,Lang Lang,Hungarian Rhapsody No 2,Classical,787,38,album
 2025-12-29,Dua Lipa,Levitating,Pop,214,1266,playlist

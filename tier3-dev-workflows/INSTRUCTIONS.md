@@ -34,8 +34,7 @@ Look at the output. Does anything seem off?
 
 ### Verify the data
 
-Run these checks and compare against what you would expect from a 1,000-row
-CSV with 8 genres:
+Run these checks and compare against what you would expect from the raw CSV:
 
 ```bash
 uv run python -c "
@@ -49,9 +48,9 @@ conn.close()
 ```
 
 **Expected (correct) values:**
-- Row count: **1000**
-- Genres should include **R&B**
-- Play counts typically range 10--2000; durations typically range 150--900
+- Row count: **1020**
+- Genres should include **R&B** (8 genres total)
+- Play counts typically range 10--2000; durations typically range 120--900
 
 ### Fix it with Claude
 
@@ -94,11 +93,23 @@ Use Claude as an analytical tool. Ask it questions about the streaming data:
 
 Watch how Claude writes and runs SQL on the fly.
 
+## Exercise D: Ship It (~5 min)
+
+Deploy your app so anyone can see it:
+
+> Deploy this app to Cloud Run. Use the default project. Make it publicly
+> accessible.
+
+If it works, you now have a live URL. Share it with the room.
+
+You just built, debugged, and shipped a web app in 90 minutes -- without
+editing a single line of code by hand.
+
 ## Bonus: Streaming Analytics Page
 
 If you have time, ask Claude to add an analytics page to your app that
 visualizes the streaming data with charts (listening trends, top artists,
-genre breakdown).
+genre breakdown). You might find something unexpected in the data.
 
 ---
 

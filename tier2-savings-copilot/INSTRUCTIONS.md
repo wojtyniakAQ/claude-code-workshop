@@ -106,5 +106,5 @@ Compare this experience to tier 1:
 
 ## Done?
 
-When you have a working savings projection and at least one custom feature,
+When you have a working savings projection and a feature worth pitching,
 move to **tier3-dev-workflows**.

@@ -45,3 +45,13 @@ Then open http://localhost:8000 in your browser.
 - If the app crashes, paste the error into Claude Code.
 - If you want a different look, just ask ("use a dark theme", "make the
   layout two-column").
+
+## Facilitator notes
+
+- **Show and tell after tier 1** (~2 min): Ask 1-2 people to share their
+  screen. Dashboards will look different based on prompting style -- point
+  that out.
+- **Float during exercises**: Circulate and help people who are stuck,
+  especially non-technical participants. Nudge on prompt phrasing.
+- **Bug hunt debrief in tier 3**: After the parser exercise, quick show of
+  hands -- "Who found all 4 bugs?" Discuss the ones people missed.
