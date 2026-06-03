@@ -331,7 +331,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
       <div class="steps">
         <div><span class="n">1</span>Open the desktop app → <strong>Code</strong> tab</div>
         <div><span class="n">2</span><strong>Select folder</strong> → make a new empty folder → open it</div>
-        <div><span class="n">3</span>Paste the setup prompt from your card, then this:</div>
+        <div><span class="n">3</span>Paste the setup prompt from your card — it downloads today's files into your folder. Then this:</div>
       </div>
       <div class="prompt-box">
         <div class="prompt-label">Paste this</div>
@@ -422,36 +422,47 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 12 · Hands-on: The real difference -->
+  <!-- 12 · Hands-on: The real difference — explore the messy folder -->
   <section class="slide">
     <div class="stack-lg">
       <span class="badge">Hands-on · 20 min</span>
       <h2>The real difference</h2>
       <p class="lede tight">The part you can't do by dropping a file into a chat window.</p>
-      <div class="steps">
-        <div><span class="n">A</span>Let Claude read a whole folder of mismatched files</div>
-        <div><span class="n">B</span>Turn on <strong>plan mode</strong> — agree the approach first</div>
-        <div><span class="n">C</span>Watch it <strong>write and run real code</strong> to build an interactive app</div>
-        <div><span class="n">D</span>"Make this a button I press next month" → <strong>/refresh-report</strong></div>
+      <p class="muted">Your <strong>data</strong> folder already holds three monthly files that don't match — different column names, date formats, a missing week — plus a notes.txt. They arrived with your setup.</p>
+      <div class="prompt-box">
+        <div class="prompt-label">Paste this — let it read the whole pile</div>
+        <div class="prompt-text">Look through everything in the data folder — there are a few files and they don't quite match, and there's a notes.txt. Tell me in plain English what's in there and where the files disagree.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 · Plan mode — concept + the actual plan request -->
+  <section class="slide">
+    <div class="stack-lg">
+      <div class="eyebrow">Plan mode — for anything bigger than a quick tweak</div>
+      <h2>Plan before you build</h2>
+      <div class="prompt-box">
+        <div class="prompt-label">Turn on plan mode, then paste this</div>
+        <div class="prompt-text">Combine these files into one clean dataset and build me an interactive app — one HTML file with tabs, filters, search, and headline numbers that recompute as I filter. Don't build yet — lay out your approach so I can adjust.</div>
+      </div>
+      <div class="callout">Cheap to throw away a plan. <strong>Expensive to throw away work.</strong></div>
+    </div>
+  </section>
+
+  <!-- 14 · Build it, then keep it — run code + the reusable button -->
+  <section class="slide">
+    <div class="stack-lg">
+      <h2>Build it — then keep it</h2>
+      <p class="lede">Approve the plan, then watch it <strong>write and run real code</strong> to combine the files and build your app. When it's done, make it reusable:</p>
+      <div class="prompt-box">
+        <div class="prompt-label">Paste this</div>
+        <div class="prompt-text">Now make this a button I can press to rebuild the whole app next month when I drop new files into the folder. Call it /refresh-report.</div>
       </div>
       <div class="callout">Chat hands you a picture. <strong>Claude Code hands you a working app.</strong></div>
     </div>
   </section>
 
-  <!-- 13 · B1 plan mode -->
-  <section class="slide">
-    <div class="stack-lg">
-      <div class="eyebrow">Plan mode</div>
-      <h2>Plan before you build</h2>
-      <ul class="lede">
-        <li>For anything bigger than a quick tweak, plan first.</li>
-        <li>Claude proposes the approach; you adjust <em>before</em> any work is done.</li>
-      </ul>
-      <div class="callout">Cheap to throw away a plan. <strong>Expensive to throw away work.</strong></div>
-    </div>
-  </section>
-
-  <!-- 14 · Hands-on: Share it -->
+  <!-- 15 · Hands-on: Share it -->
   <section class="slide">
     <div class="stack-lg">
       <span class="badge">Hands-on · 6 min</span>
@@ -464,7 +475,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 15 · Close: where this fits -->
+  <!-- 16 · Close: where this fits -->
   <section class="slide">
     <div class="stack-lg">
       <div class="eyebrow">Take it back to your desk</div>
@@ -478,7 +489,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 16 · Thank you -->
+  <!-- 17 · Thank you -->
   <section class="slide slide--closing">
     <div>
       <div class="eyebrow" style="justify-content:center">SandboxAQ</div>
@@ -487,7 +498,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 17 · Appendix divider -->
+  <!-- 18 · Appendix divider -->
   <section class="slide slide--divider">
     <div>
       <div class="eyebrow">Optional — only if asked</div>
@@ -495,7 +506,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 18 · Appendix content -->
+  <!-- 19 · Appendix content -->
   <section class="slide">
     <div class="stack-lg">
       <div class="eyebrow">The same tool, deeper</div>
@@ -514,7 +525,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
 </div>
 
 <div class="wordmark">Sandbox<span class="aq">AQ</span></div>
-<div class="counter" id="counter">01 / 18</div>
+<div class="counter" id="counter">01 / 19</div>
 <nav class="nav">
   <button id="prev" aria-label="Previous slide">&#8249;</button>
   <button id="next" aria-label="Next slide">&#8250;</button>
