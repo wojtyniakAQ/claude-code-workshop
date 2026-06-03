@@ -39,7 +39,7 @@ just-in-time interludes (see `presentation-vp/outline.md`).
 | 0 | Say hello (open app, one delightful prompt) | 6 | `cards/00-say-hello.md` |
 | - | Thin intro (3 slides: what it is, the promise, the chat-vs-Code table) | 3 | `presentation-vp/outline.md` |
 | 1 | Your first build (meeting-cost calculator, iterate by talking) | 13 | `cards/01-first-build.md` |
-| 2 | How it works (coworker, your files, CLAUDE.md, context, control) | 10 | `cards/02-how-it-works.md` |
+| 2 | How it works (coworker, your files, teaching preferences, staying on track, control) | 10 | `cards/02-how-it-works.md` |
 | 3 | The real difference (messy folder -> runs code -> interactive app -> reusable button) | 20 | `cards/03-real-difference.md` |
 | 4 | Share it (regenerate the work as an HTML deck) | 6 | `cards/04-share-it.md` |
 | - | Wrap (where this fits in their week) | 2 | -- |
@@ -57,8 +57,10 @@ That paste doubles as the first "watch it work" moment.
 After setup, their folder contains:
 
 - `CLAUDE.md` -- friendly house rules (plain English, build single-file HTML).
-  **Note:** the brand color is intentionally *not* in here, so you can add it live
-  in Segment 2 to demonstrate CLAUDE.md changing behavior.
+  **Note:** the brand color is intentionally *not* in here, so in Segment 2 a
+  participant can simply *ask Claude to remember it* and watch the next build
+  change. (Under the hood Claude saves that to CLAUDE.md / memory -- but
+  participants only ever make a request; they never think about the file.)
 - `data/` -- the deliberately-messy dataset for Segment 3 (`jan.csv`, `feb.csv`,
   `mar.csv`, `notes.txt`).
 
@@ -137,7 +139,8 @@ day. First confirm the **setup prompt actually downloads all five files** into a
 fresh empty folder on the room's network (this is the new failure point -- if
 github.com is blocked, switch to the zip). Then confirm each build renders in the
 preview with no manual steps, the live
-CLAUDE.md edit changes behavior, plan mode works, Segment 3 actually runs code and
+"remember this" preference request changes the next build, plan mode works,
+Segment 3 actually runs code and
 reconciles the files, `/refresh-report` re-runs, and the finale deck flips with
 arrow keys. Time every segment and trim until the core fits inside 50 minutes,
 leaving 10 for questions and the inevitable hiccup.

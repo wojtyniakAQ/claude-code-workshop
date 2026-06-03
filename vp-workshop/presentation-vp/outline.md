@@ -48,14 +48,14 @@ deck's developer slides in plain English. (Source slides in parentheses.)
 - Everything it makes is a real file in your folder that you own.
 - Not trapped in a chat. Email it, keep it, open it next year.
 
-### Slide A3 -- House rules: CLAUDE.md (reuse "While My CLAUDE.md Gently Leads")
-- A file Claude reads every time -- your standing preferences.
-- Set it once ("always use our brand color"), never repeat yourself.
+### Slide A3 -- Tell it once, it remembers (reuse "While My CLAUDE.md Gently Leads")
+- Say your preferences in plain English: "from now on, always use our brand color."
+- No settings to edit -- you tell it, and it sticks for next time.
 - (Live demo happens here -- see card 02.)
 
-### Slide A4 -- Long chats: /compact (reuse "Getting Better / context")
-- Conversations fill up. Type `/compact` and it tidies up and keeps going.
-- Important things live in files, so nothing is lost.
+### Slide A4 -- If it drifts, just remind it (reuse "Getting Better / context")
+- Long session? You don't manage anything.
+- If it loses the thread, tell it "keep going from here," like you'd nudge a colleague.
 
 ### Slide A5 -- You're in control
 - It asks before doing anything real. Nothing happens you didn't approve.
