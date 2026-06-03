@@ -1,0 +1,79 @@
+date,artist,track,genre,duration_seconds,plays,source
+02/01/2025,J. Cole,PRIDE is the Devil,Hip-Hop,204,322,playlist
+02/01/2025,Harry Styles,As It Was,Pop,183,728,playlist
+02/02/2025,J. Cole,PRIDE is the Devil,Hip-Hop,288,1365,TEST
+02/02/2025,Harry Styles,As It Was,Pop,217,1642,radio
+02/03/2025,The Weeknd,Save Your Tears,Pop,242,991,album
+02/03/2025,Olivia Rodrigo,drivers license,Pop,256,388,album
+02/03/2025,Taylor Swift,Anti-Hero,Pop,227,1802,playlist
+02/04/2025,Radiohead,Karma Police,Rock,250,362,search
+02/04/2025,The Weeknd,Save Your Tears,Pop,164,863,radio
+02/04/2025,J. Cole,PRIDE is the Devil,Hip-Hop,226,1134,radio
+02/04/2025,Radiohead,Creep,Rock,229,350,liked
+02/05/2025,Hilary Hahn,Violin Concerto in D,Classical,849,92,TEST
+02/05/2025,The Rolling Stones,Paint It Black,Rock,276,462,search
+02/05/2025,Steve Lacy,Mercury,R&B,257,611,playlist
+02/05/2025,boy pablo,Feeling Lonely,Indie,269,336,playlist
+02/05/2025,Harry Styles,As It Was,Pop,207,1504,playlist
+02/05/2025,Tyler the Creator,NEW MAGIC WAND,Hip-Hop,285,954,playlist
+02/05/2025,Kendrick Lamar,DNA,Hip-Hop,297,1137,album
+02/05/2025,Clairo,Bags,Indie,352,238,search
+02/06/2025,Led Zeppelin,Whole Lotta Love,Rock,393,331,playlist
+02/06/2025,Disclosure,Magnets,Electronic,274,309,TEST
+02/07/2025,The Weeknd,Save Your Tears,Pop,211,1575,playlist
+02/07/2025,Frank Ocean,Pink + White,R&B,206,120,playlist
+02/07/2025,Arctic Monkeys,R U Mine,Rock,218,89,radio
+02/08/2025,Drake,Hotline Bling,Hip-Hop,298,253,album
+02/08/2025,Bonobo,Bambro Koyo Ganda,Electronic,439,225,playlist
+02/08/2025,Jorja Smith,Blue Lights,R&B,256,394,liked
+02/09/2025,Drake,Gods Plan,Hip-Hop,231,965,playlist
+02/09/2025,Tyler the Creator,EARFQUAKE,Hip-Hop,299,1376,playlist
+02/10/2025,Taylor Swift,Shake It Off,Pop,252,1369,search
+02/10/2025,ODESZA,Line of Sight,Electronic,378,63,liked
+02/10/2025,Kendrick Lamar,HUMBLE,Hip-Hop,270,188,playlist
+02/11/2025,Drake,Hotline Bling,Hip-Hop,177,866,radio
+02/11/2025,Dua Lipa,Levitating,Pop,231,458,search
+02/11/2025,Tyler the Creator,See You Again,Hip-Hop,275,1449,playlist
+02/12/2025,Kamasi Washington,Street Fighter Mas,Jazz,404,66,playlist
+02/12/2025,The Weeknd,Starboy,Pop,240,727,radio
+02/12/2025,Harry Styles,As It Was,Pop,235,1033,radio
+02/12/2025,Led Zeppelin,Whole Lotta Love,Rock,392,445,radio
+02/13/2025,Jamie xx,Loud Places,Electronic,255,361,album
+02/14/2025,Yuja Wang,Rondo Capriccioso,Classical,823,72,album
+02/15/2025,Taylor Swift,Shake It Off,Pop,224,1497,playlist
+02/15/2025,Bonobo,Bambro Koyo Ganda,Electronic,270,2015,liked
+02/16/2025,Kamasi Washington,Fists of Fury,Jazz,456,60,search
+02/16/2025,Phoebe Bridgers,Kyoto,Indie,286,228,playlist
+02/16/2025,Harry Styles,Adore You,Pop,177,1627,album
+02/16/2025,Dua Lipa,Levitating,Pop,214,429,album
+02/17/2025,Phoebe Bridgers,Motion Sickness,Indie,234,258,album
+02/17/2025,Taylor Swift,Cruel Summer,Pop,169,440,search
+02/17/2025,J. Cole,PRIDE is the Devil,Hip-Hop,284,905,playlist
+02/17/2025,The Beatles,Ticket to Ride,Rock,191,23351,radio
+02/18/2025,Tyler the Creator,See You Again,Hip-Hop,258,858,playlist
+02/18/2025,Jamie xx,Sleep Sound,Electronic,400,172,radio
+02/19/2025,J. Cole,PRIDE is the Devil,Hip-Hop,206,1294,album
+02/19/2025,Tyler the Creator,NEW MAGIC WAND,Hip-Hop,187,280,playlist
+02/20/2025,Kamasi Washington,Street Fighter Mas,Jazz,254,62,playlist
+02/20/2025,Lang Lang,Ballade No 1,Classical,753,48,radio
+02/20/2025,Jorja Smith,Be Honest,R&B,189,235,search
+02/20/2025,SZA,Good Days,Hip-Hop,224,599,playlist
+02/20/2025,Olivia Rodrigo,drivers license,Pop,159,969,search
+02/21/2025,Dua Lipa,Dont Start Now,Pop,267,1292,radio
+02/21/2025,Dua Lipa,Dont Start Now,Pop,268,1627,radio
+02/21/2025,Robert Glasper,F.T.B.,Jazz,340,130,playlist
+02/22/2025,Daniel Caesar,Best Part,R&B,236,112,playlist
+02/22/2025,Dua Lipa,New Rules,Pop,179,1097,playlist
+02/23/2025,Phoebe Bridgers,Kyoto,Indie,321,109,playlist
+02/23/2025,Tyler the Creator,EARFQUAKE,Hip-Hop,187,1494,search
+02/23/2025,Olivia Rodrigo,vampire,Pop,245,1872,radio
+02/23/2025,The Weeknd,Save Your Tears,Pop,168,1585,search
+02/24/2025,Daniel Caesar,Best Part,R&B,243,630,album
+02/24/2025,The Weeknd,Starboy,Pop,261,1273,playlist
+02/25/2025,Radiohead,No Surprises,Rock,412,110,playlist
+02/26/2025,The Weeknd,Starboy,Pop,155,1279,playlist
+02/26/2025,HER,Best Part,R&B,281,482,search
+02/26/2025,Frank Ocean,Nights,R&B,280,542,radio
+02/27/2025,Kamasi Washington,Fists of Fury,Jazz,445,49,radio
+02/28/2025,J. Cole,No Role Modelz,Hip-Hop,252,1415,playlist
+02/28/2025,Led Zeppelin,Kashmir,Rock,323,345,playlist

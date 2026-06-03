@@ -1,0 +1,19 @@
+Notes from the data team (read me before using these files!)
+===========================================================
+
+These three files are monthly exports, but they come from three different
+systems and they do NOT line up cleanly. A couple of things to know:
+
+1. The column names drift between months. For example one month calls it
+   'play_count' and another calls it 'plays'; March calls the date column
+   'day' instead of 'date'. They mean the same thing.
+
+2. The date formats are all different (2025-02-03 vs 02/03/2025 vs
+   03-Mar-2025). Same dates, different dressing.
+
+3. MARCH IS MISSING ITS FIRST WEEK (days 1-7). There was a system
+   migration, so anything before March 8th just isn't there. That's
+   expected, not a bug.
+
+4. IGNORE ANY ROW WHERE source = TEST. Those are QA artifacts from our
+   testing, not real listens. Leave them out of every total.
