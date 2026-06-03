@@ -59,8 +59,9 @@ After setup, their folder contains:
 - `CLAUDE.md` -- friendly house rules (plain English, build single-file HTML).
   **Note:** the brand color is intentionally *not* in here, so in Segment 2 a
   participant can simply *ask Claude to remember it* and watch the next build
-  change. (Under the hood Claude saves that to CLAUDE.md / memory -- but
-  participants only ever make a request; they never think about the file.)
+  change. (Under the hood Claude saves that to its memory -- not the folder's
+  CLAUDE.md, so don't expect to see it there -- but participants only ever make a
+  request; they never think about where it's stored.)
 - `data/` -- the deliberately-messy dataset for Segment 3 (`jan.csv`, `feb.csv`,
   `mar.csv`, `notes.txt`).
 

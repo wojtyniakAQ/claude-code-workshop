@@ -18,7 +18,8 @@ A chat upload takes one file at a time.
 
 ## 3b · Plan before the big build
 
-Turn on **plan mode** (type `/plan` or toggle it), then paste:
+Turn on **plan mode** (toggle it on in the app -- now Claude plans first and
+won't build until you say go), then paste:
 
 > I want to combine these files into one clean dataset and build me an interactive app -- a single self-contained HTML file with tabs, filters and a search box that update the charts live, sortable tables, click-a-bar-to-drill-down, and headline numbers that recompute as I filter. Don't build yet -- lay out your approach so I can adjust.
 
@@ -46,6 +47,9 @@ a table, click a bar to drill in. Then reshape it by talking:
 ## 3d · Turn it into a button you keep
 
 > Now make this a button I can press to rebuild the whole app next month when I drop new files into the folder. Call it `/refresh-report`.
+
+(If Claude describes the button and asks whether to go ahead, just say "yes,
+create it" -- it's all one conversation.)
 
 Then run it:
 

@@ -23,6 +23,9 @@ into your folder:
 >
 > Then tell me what you set up.
 
+If Claude says it couldn't find or download the files (a "404" or "not found"),
+don't worry -- tell your facilitator and they'll hand you today's backup copy.
+
 If a small box pops up asking permission to run something, click **Allow** -- that
 just means Claude is asking before it acts. You're in control; that's normal.
 
