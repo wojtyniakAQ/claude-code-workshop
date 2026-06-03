@@ -77,10 +77,12 @@ Requirements: `vp-workshop/` must be pushed to `main` (the URLs are
 and the room's network must reach github.com. Verify both during your dry-run.
 
 **Fallback path -- a zip (offline-proof).** If you're worried about the room's
-wifi or a firewall, email/Slack a zip ahead of time. Build it from this folder:
+wifi or a firewall, email/Slack a zip ahead of time -- it needs no GitHub account
+either. A prebuilt **`vp-workshop/starter.zip`** is included. If you change
+anything under `starter/`, regenerate it:
 
 ```bash
-cd vp-workshop && zip -r starter.zip starter
+cd vp-workshop && zip -r starter.zip starter -x '*.DS_Store'
 ```
 
 Then the in-session step is just: "download `starter.zip`, double-click to unzip,
