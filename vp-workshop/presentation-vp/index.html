@@ -323,27 +323,21 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 4 · Hands-on: Say hello (open folder, download data, first build) -->
+  <!-- 4 · Hands-on: Say hello (empty folder + confetti, no download yet) -->
   <section class="slide">
     <div class="stack-lg">
       <span class="badge">Hands-on · 6 min</span>
       <h2>Say hello</h2>
       <div class="steps">
-        <div><span class="n">1</span>Desktop app → <strong>Code</strong> tab → <strong>Select folder</strong> → make a new empty folder → open it</div>
-        <div><span class="n">2</span>Paste this to pull in today's files:</div>
-      </div>
-      <div class="prompt-box">
-        <div class="prompt-label">Paste this — downloads today's files</div>
-        <div class="prompt-text">Download these into my folder, putting the CSVs in a "data" subfolder. They're at https://raw.githubusercontent.com/wojtyniakAQ/claude-code-workshop/main/vp-workshop/starter/ — the files are CLAUDE.md, data/jan.csv, data/feb.csv, data/mar.csv, data/notes.txt</div>
-      </div>
-      <div class="steps">
-        <div><span class="n">3</span>Then paste:</div>
+        <div><span class="n">1</span>Open the desktop app → <strong>Code</strong> tab</div>
+        <div><span class="n">2</span><strong>Select folder</strong> → make a new empty folder → open it</div>
+        <div><span class="n">3</span>Paste this:</div>
       </div>
       <div class="prompt-box">
         <div class="prompt-label">Paste this</div>
         <div class="prompt-text">Make a file called hello.html with my name in big friendly letters and a button that fires confetti when I click it. Then show it to me.</div>
       </div>
-      <p class="muted">A box may ask permission — click <strong>Allow</strong>. Files won't download? Ask your facilitator for the backup.</p>
+      <p class="muted">A box may ask permission — click <strong>Allow</strong>. You're in control; that's normal.</p>
     </div>
   </section>
 
@@ -428,16 +422,19 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 12 · Hands-on: The real difference — explore the messy folder -->
+  <!-- 12 · Hands-on: The real difference — get the data, then explore -->
   <section class="slide">
     <div class="stack-lg">
       <span class="badge">Hands-on · 20 min</span>
       <h2>The real difference</h2>
-      <p class="lede tight">The part you can't do by dropping a file into a chat window.</p>
-      <p class="muted">Your <strong>data</strong> folder already holds three monthly files that don't match — different column names, date formats, a missing week — plus a notes.txt. They arrived with your setup.</p>
+      <p class="lede tight">The part you can't do by dropping a file into a chat window — start by pulling in today's messy data.</p>
       <div class="prompt-box">
-        <div class="prompt-label">Paste this — let it read the whole pile</div>
-        <div class="prompt-text">Look through everything in the data folder — there are a few files and they don't quite match, and there's a notes.txt. Tell me in plain English what's in there and where the files disagree.</div>
+        <div class="prompt-label">Paste this — gets today's data</div>
+        <div class="prompt-text">Download today's data into a "data" folder. The files are at https://raw.githubusercontent.com/wojtyniakAQ/claude-code-workshop/main/vp-workshop/starter/data/ — jan.csv, feb.csv, mar.csv, notes.txt</div>
+      </div>
+      <div class="prompt-box">
+        <div class="prompt-label">Then paste — let it read the whole pile</div>
+        <div class="prompt-text">Look through everything in the data folder — a few monthly files that don't quite match (different column names, date formats, a missing week) plus a notes.txt. Tell me in plain English what's in there and where they disagree.</div>
       </div>
     </div>
   </section>

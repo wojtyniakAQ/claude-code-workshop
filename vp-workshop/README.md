@@ -36,11 +36,11 @@ just-in-time interludes (see `presentation-vp/outline.md`).
 
 | # | Segment | Min | Card |
 |---|---|---|---|
-| 0 | Say hello (open app, one delightful prompt) | 6 | `cards/00-say-hello.md` |
+| 0 | Say hello (open an empty folder, one delightful prompt) | 6 | `cards/00-say-hello.md` |
 | - | Thin intro (3 slides: what it is, the promise, the chat-vs-Code table) | 3 | `presentation-vp/outline.md` |
 | 1 | Your first build (meeting-cost calculator, iterate by talking) | 13 | `cards/01-first-build.md` |
 | 2 | How it works (coworker, your files, teaching preferences, staying on track, control) | 10 | `cards/02-how-it-works.md` |
-| 3 | The real difference (messy folder -> runs code -> interactive app -> reusable button) | 20 | `cards/03-real-difference.md` |
+| 3 | The real difference (fetch the messy data -> runs code -> interactive app -> reusable button) | 20 | `cards/03-real-difference.md` |
 | 4 | Share it (regenerate the work as an HTML deck) | 6 | `cards/04-share-it.md` |
 | - | Wrap (where this fits in their week) | 2 | -- |
 
@@ -48,47 +48,46 @@ Stretch goals to fill 60 -> 90 min are at the bottom of `presentation-vp/outline
 
 ## What participants open
 
-Do **not** ask non-technical execs to clone a git repo. Instead, each participant
+Do **not** ask non-technical execs to clone a git repo. Each participant just
 opens a brand-new **empty folder** in the desktop app (Code tab -> Select folder ->
-make a new folder) and pastes a one-time **setup prompt** as their first message.
-Claude downloads today's files into the folder itself (see `cards/00-say-hello.md`).
-That paste doubles as the first "watch it work" moment.
+make a new folder). That's the whole setup -- nothing to download up front.
 
-After setup, their folder contains:
+The only download happens later, in **Segment 3**, and only when it's needed:
+Claude fetches the messy dataset (`jan.csv`, `feb.csv`, `mar.csv`, `notes.txt`)
+straight from the public repo into a `data/` folder (the paste prompt is in
+`cards/03-real-difference.md`). Segments 0-2 need no files -- those build prompts
+are self-contained.
 
-- `CLAUDE.md` -- friendly house rules (plain English, build single-file HTML).
-  **Note:** the brand color is intentionally *not* in here, so in Segment 2 a
-  participant can simply *ask Claude to remember it* and watch the next build
-  change. (Under the hood Claude saves that to its memory -- not the folder's
-  CLAUDE.md, so don't expect to see it there -- but participants only ever make a
-  request; they never think about where it's stored.)
-- `data/` -- the deliberately-messy dataset for Segment 3 (`jan.csv`, `feb.csv`,
-  `mar.csv`, `notes.txt`).
+No house-rules / `CLAUDE.md` file to manage: every build prompt already asks for
+"a single self-contained HTML file... show it to me," so the preview-pane behavior
+is baked into the prompts. (The Segment 2 "teach a preference" demo works by
+*asking* Claude to remember something; it saves to its own memory, not a file the
+VP ever has to see.)
 
-Everything else in `vp-workshop/` (this README, `cards/`, `presentation-vp/`,
-`scripts/`) is for you, the facilitator. Participants don't need it.
+Everything in `vp-workshop/` (this README, `cards/`, `presentation-vp/`,
+`scripts/`, `starter/`) is for you, the facilitator. Participants don't need it.
 
-## Getting the starter files onto each laptop (no git)
+## Getting the data onto each laptop (no git)
 
-**Primary path -- let Claude fetch them.** The setup prompt in
-`cards/00-say-hello.md` points Claude at the public raw URLs of the starter files
-and has it download them. One paste, deterministic, no downloads to hunt for.
-Requirements: `vp-workshop/` must be pushed to `main` (the URLs are
-`https://raw.githubusercontent.com/wojtyniakAQ/claude-code-workshop/main/vp-workshop/starter/...`),
-and the room's network must reach github.com. Verify both during your dry-run.
+**Primary path -- let Claude fetch it.** In Segment 3 the card's paste prompt
+points Claude at the public raw URLs and it downloads the four data files. One
+paste, deterministic, no account, nothing to hunt for. Requirements:
+`vp-workshop/` must be on `main` (URLs are
+`https://raw.githubusercontent.com/wojtyniakAQ/claude-code-workshop/main/vp-workshop/starter/data/...`)
+and the room must reach github.com. Verify both in your dry-run.
 
-**Fallback path -- a zip (offline-proof).** If you're worried about the room's
-wifi or a firewall, email/Slack a zip ahead of time -- it needs no GitHub account
-either. A prebuilt **`vp-workshop/starter.zip`** is included. If you change
-anything under `starter/`, regenerate it:
+**Fallback path -- a zip (offline-proof).** If the room's wifi or a firewall might
+block GitHub, email/Slack the data ahead of time -- no account needed. A prebuilt
+**`vp-workshop/data.zip`** is included (it unzips to a `data/` folder). If you
+change the dataset, regenerate it:
 
 ```bash
-cd vp-workshop && zip -r starter.zip starter -x '*.DS_Store'
+cd vp-workshop/starter && zip -r ../data.zip data -x '*.DS_Store'
 ```
 
-Then the in-session step is just: "download `starter.zip`, double-click to unzip,
-and in the app click Select Folder and pick the unzipped `starter` folder." Swap
-the setup-prompt step in card 00 for this if you go the zip route.
+If you go the zip route, at Segment 3 tell participants: "skip the download prompt
+-- unzip today's `data` folder into your workshop folder instead," then continue
+from the explore step.
 
 ## The Segment 3 dataset
 
@@ -112,9 +111,9 @@ python vp-workshop/scripts/make_messy_data.py
    per attendee. Confirm every participant is provisioned and signed in
    beforehand. This is the #1 thing that eats the first 15 minutes.
 2. **Pre-work email (3-4 days out):** install the Claude Code desktop app, sign in
-   with the Anthropic account, confirm the **Code** tab loads. No git, no files to
-   download -- they'll set up their folder in-session with one paste (or with the
-   zip, if you chose that fallback).
+   with the Anthropic account, confirm the **Code** tab loads. No git, and nothing
+   to download up front -- they open an empty folder; the only download is today's
+   data in Segment 3 (or the zip, if you use that fallback).
 3. **Permissions mode:** set **Auto-accept edits** for the live flow so files
    write without a prompt every time. Mention that "ask first" is the normal
    default they'd keep day to day.
@@ -138,12 +137,11 @@ python vp-workshop/scripts/make_messy_data.py
 ## Dry-run checklist
 
 Run the whole thing solo on a clean machine in the **desktop app** before game
-day. First confirm the **setup prompt actually downloads all five files** into a
-fresh empty folder on the room's network (this is the new failure point -- if
-github.com is blocked, switch to the zip). Then confirm each build renders in the
-preview with no manual steps, the live
-"remember this" preference request changes the next build, plan mode works,
-Segment 3 actually runs code and
-reconciles the files, `/refresh-report` re-runs, and the finale deck flips with
-arrow keys. Time every segment and trim until the core fits inside 50 minutes,
-leaving 10 for questions and the inevitable hiccup.
+day. Confirm: the confetti and meeting-cost builds render in the preview with no
+manual steps; the live "remember this" preference request changes the next build;
+in **Segment 3 the data prompt downloads the four files** on the room's network
+(the likely failure point -- if github.com is blocked, switch to the zip); plan
+mode works; Claude actually runs code and reconciles the files; `/refresh-report`
+re-runs; and the finale deck flips with arrow keys. Time every segment and trim
+until the core fits inside 50 minutes, leaving 10 for questions and the inevitable
+hiccup.

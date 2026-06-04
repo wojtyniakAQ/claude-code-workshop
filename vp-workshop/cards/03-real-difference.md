@@ -2,21 +2,27 @@
 
 This is the part you can't do by dropping a file into a chat window.
 
-In your folder is a `data/` folder with **three monthly files that don't agree**
-(`jan.csv`, `feb.csv`, `mar.csv`) plus a human `notes.txt`. Different column
-names, different date formats, a missing week, some junk rows. Exactly the kind of
+Work through it in five steps.
+
+## 3a · Grab today's data
+
+First, pull in the messy files -- **three monthly files that don't agree**
+(`jan.csv`, `feb.csv`, `mar.csv`) plus a human `notes.txt`. Different column names,
+different date formats, a missing week, some junk rows. Exactly the kind of
 mismatched mess that lands on your desk in real life.
 
-Work through it in four steps.
+> Download today's data into a `data` folder. The files are at https://raw.githubusercontent.com/wojtyniakAQ/claude-code-workshop/main/vp-workshop/starter/data/ -- jan.csv, feb.csv, mar.csv, notes.txt
 
-## 3a · Let Claude read the whole pile
+(If Claude says it couldn't download them, ask your facilitator for the backup.)
+
+## 3b · Let Claude read the whole pile
 
 > Look through everything in the `data/` folder -- there are a few files and they don't quite match, and there's a notes.txt. Tell me in plain English what's in there and where the files disagree.
 
 Notice it read **all** the files at once, and the notes, and figured out the mess.
 A chat upload takes one file at a time.
 
-## 3b · Plan before the big build
+## 3c · Plan before the big build
 
 Turn on **plan mode** (toggle it on in the app -- now Claude plans first and
 won't build until you say go), then paste:
@@ -29,7 +35,7 @@ Read the plan. Change one thing (e.g. "add a 'top artists' tab"). Then approve.
 > to throw away a plan and expensive to throw away work -- and you get to steer
 > before anything is built.
 
-## 3c · Let it build (and watch it run real code)
+## 3d · Let it build (and watch it run real code)
 
 Claude will now **write and run actual code** to clean and combine the files. If
 it hits a snag, watch it fix itself and re-run. That self-correcting loop -- doing
@@ -44,7 +50,7 @@ a table, click a bar to drill in. Then reshape it by talking:
 
 **Chat hands you a picture. Claude Code hands you a working app.**
 
-## 3d · Turn it into a button you keep
+## 3e · Turn it into a button you keep
 
 > Now make this a button I can press to rebuild the whole app next month when I drop new files into the folder. Call it `/refresh-report`.
 
