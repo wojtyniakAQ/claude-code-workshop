@@ -5,3 +5,4 @@ __pycache__/
 penny_lane.db
 uv.lock
 infra/
+.DS_Store
