@@ -593,13 +593,9 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     }
   });
 
-  // click the right/left third of the screen to advance/go back
-  document.getElementById('deck').addEventListener('click', (e) => {
-    if (e.target.closest('a, button')) return;
-    const x = e.clientX / window.innerWidth;
-    if (x > 0.66) go(1);
-    else if (x < 0.34) go(-1);
-  });
+  // No click-to-advance: attendees need to select and copy the prompt text,
+  // and ending a selection fires a click. Navigation is keyboard + the
+  // explicit prev/next buttons only.
 
   window.addEventListener('hashchange', () => show(clampIndexFromHash()));
   show(i);
