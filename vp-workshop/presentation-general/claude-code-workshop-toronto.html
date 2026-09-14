@@ -221,6 +221,20 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
 .slide--title .eyebrow::before { display: none; }
 .slide--title h1 { margin-bottom: 0.1em; }
 .slide--title .leaf { color: var(--accent); font-style: italic; font-family: var(--serif); font-weight: 500; font-size: clamp(22px, 3vw, 36px); margin-bottom: 28px; }
+.slide--title .qr { margin-top: clamp(24px, 3vw, 40px); display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.slide--title .qr svg {
+  display: block; width: clamp(104px, 11vw, 148px); height: auto;
+  padding: 12px; background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  shape-rendering: crispEdges;
+}
+.slide--title .qr a {
+  font-family: var(--mono); font-size: clamp(12px, 1.2vw, 15px);
+  color: var(--text-dim); text-decoration: none;
+}
+.slide--title .qr a:hover { color: var(--accent-hover); }
 .slide--divider h2 { font-size: clamp(34px, 6vw, 64px); }
 .slide--closing h1 { font-size: clamp(48px, 8vw, 96px); }
 
@@ -288,6 +302,10 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
       <h1>Claude Code</h1>
       <div class="leaf">No code required</div>
       <p class="lede">You talk. It does the work. In your files.</p>
+      <div class="qr">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" role="img" aria-label="QR code linking to the workshop deck"><path class="qr-m" stroke="#2c2825" d="M0 0.5h7m2 0h2m1 0h1m1 0h3m1 0h2m2 0h2m2 0h7m-33 1h1m5 0h1m1 0h3m1 0h2m1 0h6m2 0h2m1 0h1m5 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m2 0h1m2 0h1m3 0h1m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m5 0h2m4 0h2m2 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-33 1h1m1 0h3m1 0h1m1 0h4m1 0h1m3 0h3m1 0h3m2 0h1m1 0h3m1 0h1m-33 1h1m5 0h1m3 0h3m1 0h1m2 0h1m1 0h1m2 0h3m1 0h1m5 0h1m-33 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-21 1h3m1 0h6m2 0h1m-25 1h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h2m1 0h3m2 0h2m1 0h1m4 0h1m2 0h1m-32 1h1m3 0h2m1 0h2m1 0h1m1 0h1m3 0h3m1 0h1m3 0h4m4 0h1m-31 1h2m2 0h1m6 0h1m3 0h2m1 0h3m1 0h2m1 0h1m2 0h3m-31 1h1m1 0h1m5 0h1m4 0h1m1 0h2m1 0h5m1 0h1m1 0h1m-29 1h2m2 0h3m1 0h1m1 0h3m2 0h1m1 0h1m1 0h3m2 0h3m2 0h1m2 0h1m-33 1h1m1 0h4m1 0h1m3 0h2m2 0h1m1 0h1m2 0h1m1 0h1m1 0h3m5 0h1m-32 1h4m1 0h1m2 0h1m1 0h4m7 0h1m2 0h1m1 0h1m1 0h4m-28 1h1m2 0h1m1 0h1m1 0h4m1 0h1m2 0h3m1 0h1m1 0h2m3 0h1m-31 1h1m1 0h4m2 0h1m1 0h1m1 0h2m1 0h2m1 0h3m3 0h2m-26 1h2m2 0h1m1 0h2m1 0h1m2 0h2m1 0h1m4 0h1m2 0h1m1 0h2m3 0h2m-33 1h1m1 0h2m1 0h3m3 0h3m2 0h3m2 0h2m1 0h3m3 0h3m-26 1h2m1 0h1m1 0h1m3 0h4m1 0h2m2 0h1m1 0h2m2 0h1m-30 1h3m1 0h2m2 0h2m3 0h4m1 0h2m1 0h1m1 0h2m2 0h1m1 0h1m-31 1h5m1 0h3m2 0h2m1 0h2m4 0h1m2 0h3m4 0h2m-33 1h1m1 0h1m1 0h1m1 0h1m3 0h4m1 0h2m1 0h1m1 0h1m1 0h1m2 0h4m1 0h3m-32 1h1m1 0h1m1 0h1m1 0h2m1 0h5m1 0h2m1 0h1m1 0h4m1 0h1m1 0h1m2 0h1m-32 1h1m1 0h1m2 0h5m1 0h2m1 0h4m3 0h1m1 0h6m-21 1h1m1 0h1m2 0h1m4 0h1m1 0h1m2 0h2m3 0h2m1 0h2m-33 1h7m2 0h4m3 0h2m4 0h3m1 0h1m1 0h1m1 0h3m-33 1h1m5 0h1m2 0h3m1 0h2m2 0h3m1 0h1m2 0h1m3 0h1m3 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m2 0h6m2 0h1m-33 1h1m1 0h3m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h1m3 0h1m3 0h1m3 0h1m-33 1h1m1 0h3m1 0h1m1 0h2m2 0h2m2 0h1m4 0h3m4 0h3m1 0h1m-33 1h1m5 0h1m2 0h1m1 0h2m2 0h1m1 0h2m1 0h5m3 0h2m1 0h1m-32 1h7m1 0h2m2 0h1m1 0h1m1 0h2m1 0h3m2 0h3m1 0h1m2 0h2"/></svg>
+        <a href="https://wojtyniakaq.github.io/claude-code-workshop/deck/">wojtyniakaq.github.io/claude-code-workshop/deck</a>
+      </div>
     </div>
   </section>
 
