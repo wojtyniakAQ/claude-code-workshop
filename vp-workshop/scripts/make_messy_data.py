@@ -64,8 +64,8 @@ WEBFORM_ROWS = [
     # Mess #2: typo domain -- this is their correct-domain record.
     ("Derek Holloway", "derek.holloway@sandboxaq.com", "Engineering", "2026-08-28"),
     # Mess #3: nickname/full-name pairs (full-name half, x5).
-    ("Jennifer Stewart", "jennifer.stewart@sandboxaq.com", "Engineering", "2026-09-02"),
-    ("Kathryn Wang", "kathryn.wang@sandboxaq.com", "Product", "2026-09-01"),
+    ("Rosalind Beaumont", "rosalind.beaumont@sandboxaq.com", "Engineering", "2026-09-02"),
+    ("Philippa Ashworth", "philippa.ashworth@sandboxaq.com", "Product", "2026-09-01"),
     ("Benjamin Torres", "benjamin.torres@sandboxaq.com", "Sales", "2026-08-30"),
     ("Nathaniel Cho", "nathaniel.cho@sandboxaq.com", "Data Science", "2026-09-03"),
     # Plain duplicate people (appear again in another file).
@@ -101,8 +101,8 @@ EMAIL_ROWS = [
     # Mess #1: domain variant, same person as the sandboxaq.com row above.
     ("Sofia Reyes", "sofia.reyes@sandboxquantum.com", "Design", "09/03/2026"),
     # Mess #3: nickname halves.
-    ("Jenn Stewart", "jennifer.stewart@sandboxaq.com", "Engineering", "09/02/2026"),
-    ("Kat Wang", "kathryn.wang@sandboxaq.com", "Product", "09/01/2026"),
+    ("Roz Beaumont", "rosalind.beaumont@sandboxaq.com", "Engineering", "09/02/2026"),
+    ("Pip Ashworth", "philippa.ashworth@sandboxaq.com", "Product", "09/01/2026"),
     ("Alex Price", "alexandra.price@sandboxaq.com", "Marketing", "09/03/2026"),
     ("Nate Cho", "nathaniel.cho@sandboxaq.com", "Data Science", "09/04/2026"),
     # Plain duplicates (2nd appearance).

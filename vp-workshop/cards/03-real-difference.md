@@ -99,8 +99,8 @@ want.
 This is real reconciliation, so it's normal to spot something you'd push
 back on. For example:
 
-> You merged "Kat Wang" and "Kathryn Wang" into one person -- how do you know
-> that's not two different people who happen to share a last name?
+> You merged "Pip Ashworth" and "Philippa Ashworth" into one person -- how do
+> you know that's not two different people who happen to share a last name?
 
 Ask Claude to show its reasoning for that specific merge (it should point to
 the matching email). If the email doesn't match, tell it to split them back
