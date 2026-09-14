@@ -6,10 +6,11 @@ Goal: build a real, useful little tool -- and then change it just by talking.
 
 Paste this:
 
-> Build me a single self-contained HTML file called `coffee-counter.html`: I enter how many people are in the room and how many cups of coffee an average person drinks per hour. Show a big number that ticks up in real time showing how much coffee this room is getting through, with Start and Stop buttons. Make it clean, and a little bit funny. Then show it to me.
+> Build me a single self-contained HTML file called `coffee-counter.html`: I enter how many people work at my company and how many cups of coffee an average person drinks per hour. Show a big number that ticks up in real time showing how much coffee the company is getting through, with Start and Stop buttons. Make it clean, and a little bit funny. Then show it to me.
 
-Wait for the preview, then try it. Punch in the number of people actually sitting
-around you.
+Wait for the preview, then try it. Punch in roughly how many people work at your
+company. Use the whole company, not just this room -- a dozen people only get
+through 0.1 of a cup in twenty seconds, and the counter looks broken.
 
 ## Now change it -- without touching the code
 
@@ -23,7 +24,7 @@ Pick a few of these and just *ask*. One at a time:
 
 > Put my company's name and a cheeky tagline at the top.
 
-> Make the number turn red and start shaking once this room passes 20 cups.
+> Make the number turn red and start shaking once we pass 20 cups.
 
 Notice: **you never edited the file yourself.** You described the change, Claude
 made it. That's the right instinct -- describe the *what*, let Claude handle the
