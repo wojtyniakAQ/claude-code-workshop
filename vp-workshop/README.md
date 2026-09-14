@@ -38,7 +38,7 @@ just-in-time interludes (see `presentation-vp/outline.md`).
 |---|---|---|---|
 | 0 | Say hello (open an empty folder, one delightful prompt) | 6 | `cards/00-say-hello.md` |
 | - | Thin intro (3 slides: what it is, the promise, the chat-vs-Code table) | 3 | `presentation-vp/outline.md` |
-| 1 | Your first build (coffee counter, iterate by talking) | 13 | `cards/01-first-build.md` |
+| 1 | Your first build (coffee budget, iterate by talking) | 13 | `cards/01-first-build.md` |
 | 2 | How it works (coworker, your files, teaching preferences, staying on track, control) | 10 | `cards/02-how-it-works.md` |
 | 3 | The real difference (fetch the messy data -> runs code -> interactive app -> reusable button) | 20 | `cards/03-real-difference.md` |
 | 4 | Share it (regenerate the work as an HTML deck) | 6 | `cards/04-share-it.md` |
@@ -137,7 +137,7 @@ python vp-workshop/scripts/make_messy_data.py
 ## Dry-run checklist
 
 Run the whole thing solo on a clean machine in the **desktop app** before game
-day. Confirm: the confetti and coffee-counter builds render in the preview with no
+day. Confirm: the confetti and coffee-budget builds render in the preview with no
 manual steps; the live "remember this" preference request changes the next build;
 in **Segment 3 the data prompt downloads the four files** on the room's network
 (the likely failure point -- if github.com is blocked, switch to the zip); plan
