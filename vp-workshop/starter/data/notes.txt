@@ -1,19 +1,40 @@
 Notes from the data team (read me before using these files!)
 ===========================================================
 
-These three files are monthly exports, but they come from three different
-systems and they do NOT line up cleanly. A couple of things to know:
+These three files are exports of the SAME event signup list, pulled from
+three different systems (the web sign-up form, the email invite tool, and
+the calendar RSVP tool). They do NOT line up cleanly -- the same person
+often appears more than once, spelled differently each time. A few things
+to know before you reconcile them:
 
-1. The column names drift between months. For example one month calls it
-   'play_count' and another calls it 'plays'; March calls the date column
-   'day' instead of 'date'. They mean the same thing.
+1. COLUMN NAMES AND DATE FORMATS DIFFER BY SYSTEM. webform.csv uses
+   full_name/email/team/submitted_at with ISO dates (2026-09-01).
+   email-invites.csv uses Name/Email Address/Department/Responded with US
+   dates (09/03/2026). calendar-rsvps.csv uses attendee/mail/org/rsvp_date
+   with human-written dates (3 Sep 2026). Same underlying fields, different
+   dressing.
 
-2. The date formats are all different (2025-02-03 vs 02/03/2025 vs
-   03-Mar-2025). Same dates, different dressing.
+2. THE CANONICAL DEDUPE RULE: two rows are the same person when the email
+   local-part matches after lowercasing and trimming, AND the domain is any
+   of sandboxaq.com, sandboxquantum.com, or samdboxaq.com. Treat all three
+   domains as the same company. Name spelling is a hint (nicknames, initials,
+   typos happen) -- never use it as the matching key.
 
-3. MARCH IS MISSING ITS FIRST WEEK (days 1-7). There was a system
-   migration, so anything before March 8th just isn't there. That's
-   expected, not a bug.
+3. samdboxaq.com IS A TYPO, not a separate company. A few people got invited
+   through a system that had this misspelling saved as our domain. Match
+   them to their correct-domain record by email local-part as usual.
 
-4. IGNORE ANY ROW WHERE source = TEST. Those are QA artifacts from our
-   testing, not real listens. Leave them out of every total.
+4. IGNORE JUNK ROWS: at least one obvious test entry (name "TEST - DO NOT
+   USE", email test@test.com) and one row that's blank except for a stray
+   comma slipped into these exports. Neither is a person -- drop both before
+   counting anyone.
+
+5. SOME ROWS ARE MISSING team/department/org. That's a genuinely empty
+   field in the source system, not a parsing error -- leave it blank in the
+   merged output rather than guessing.
+
+6. WATCH FOR STRAY WHITESPACE AND INCONSISTENT CASING in names and emails
+   (leading/trailing spaces, ALL CAPS addresses). Trim and lowercase before
+   comparing emails.
+
+Once you've deduped correctly, you should land on 41 distinct real people.

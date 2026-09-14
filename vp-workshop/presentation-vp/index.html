@@ -429,12 +429,13 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
       <h2>The real difference</h2>
       <p class="lede tight">The part you can't do by dropping a file into a chat window — start by pulling in today's messy data.</p>
       <div class="prompt-box">
-        <div class="prompt-label">Paste this — gets today's data</div>
-        <div class="prompt-text">Download today's data into a "data" folder. The files are at https://raw.githubusercontent.com/wojtyniakAQ/claude-code-workshop/main/vp-workshop/starter/data/ — jan.csv, feb.csv, mar.csv, notes.txt</div>
+        <div class="prompt-label">Open this in your browser — not Claude</div>
+        <div class="prompt-text" style="font-size:clamp(20px, 2.6vw, 32px); text-align:center;">https://wojtyniakaq.github.io/claude-code-workshop/data/</div>
       </div>
+      <p class="muted">Download the zip, unzip it, and drop the "data" folder into your workshop folder.</p>
       <div class="prompt-box">
         <div class="prompt-label">Then paste — let it read the whole pile</div>
-        <div class="prompt-text">Look through everything in the data folder — a few monthly files that don't quite match (different column names, date formats, a missing week) plus a notes.txt. Tell me in plain English what's in there and where they disagree.</div>
+        <div class="prompt-text">Look through everything in the data folder — three signup exports pulled from three different systems that don't quite agree (different column names, different date formats) plus a notes.txt explaining the quirks. Tell me in plain English what's in there and where they disagree.</div>
       </div>
     </div>
   </section>
@@ -446,7 +447,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
       <h2>Plan before you build</h2>
       <div class="prompt-box">
         <div class="prompt-label">Turn on plan mode, then paste this</div>
-        <div class="prompt-text">Combine these files into one clean dataset and build me an interactive app — one HTML file with tabs, filters, search, and headline numbers that recompute as I filter. Don't build yet — lay out your approach so I can adjust.</div>
+        <div class="prompt-text">Reconcile these three exports into one clean attendee list and build me an interactive app — one HTML file with a searchable, sortable table of everyone, counts by team, and a panel showing which records got merged and why. Don't build yet — lay out your approach so I can adjust.</div>
       </div>
       <div class="callout">Cheap to throw away a plan. <strong>Expensive to throw away work.</strong></div>
     </div>
@@ -459,7 +460,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
       <p class="lede">Approve the plan, then watch it <strong>write and run real code</strong> to combine the files and build your app. When it's done, make it reusable:</p>
       <div class="prompt-box">
         <div class="prompt-label">Paste this</div>
-        <div class="prompt-text">Now make this a button I can press to rebuild the whole app next month when I drop new files into the folder. Call it /refresh-report.</div>
+        <div class="prompt-text">Now make this a button I can press to rebuild the whole list any time new exports come in. Call it /rebuild-list.</div>
       </div>
       <div class="callout">Chat hands you a picture. <strong>Claude Code hands you a working app.</strong></div>
     </div>

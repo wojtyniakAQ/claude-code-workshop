@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Workshop signup data — Claude Code workshop</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root {
+  --bg: #FAF6F1;
+  --surface: #FEFCF9;
+  --muted: #E8E0D6;
+  --border: #D6CEC4;
+  --text: #2C2825;
+  --text-body: #4A433C;
+  --text-dim: #7A7067;
+  --accent: #EAA221;
+  --accent-hover: #D4911B;
+  --accent-light: #FBF0D9;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", Times, serif;
+  --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --shadow-md: 0 4px 14px rgba(20, 20, 19, 0.08);
+  --border-width: 1.5px;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text-body);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+main {
+  width: 100%;
+  max-width: 640px;
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: clamp(28px, 5vw, 48px);
+}
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::before { content: ""; width: 24px; height: 1.5px; background: var(--accent); }
+
+h1 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: clamp(28px, 4vw, 36px);
+  color: var(--text);
+  margin: 0 0 14px;
+  line-height: 1.15;
+}
+
+p.instruction {
+  margin: 0 0 28px;
+  color: var(--text-body);
+}
+p.instruction code {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  background: var(--accent-light);
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  color: var(--text);
+}
+
+.download-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  background: var(--accent);
+  border-radius: var(--radius);
+  padding: 14px 22px;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: background 0.15s ease;
+}
+.download-all:hover { background: var(--accent-hover); }
+.download-all .arrow { font-size: 18px; }
+
+h2 {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+  margin: 32px 0 12px;
+}
+
+ul.file-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+ul.file-list li + li { border-top: 1px solid var(--muted); }
+ul.file-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 16px;
+  text-decoration: none;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 14px;
+  background: var(--surface);
+  transition: background 0.15s ease;
+}
+ul.file-list a:hover { background: var(--accent-light); }
+ul.file-list a .hint {
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+footer {
+  margin-top: 32px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
+footer a { color: var(--accent-hover); }
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Claude Code workshop &middot; Segment 3</div>
+  <h1>Grab the signup data</h1>
+  <p class="instruction">
+    Download and unzip, then drop the <code>data</code> folder into your workshop folder.
+  </p>
+
+  <a class="download-all" href="../vp-workshop/data.zip" download>
+    <span>Download all (zip)</span>
+    <span class="arrow">&darr;</span>
+  </a>
+
+  <h2>Individual files</h2>
+  <ul class="file-list">
+    <li><a href="../vp-workshop/starter/data/webform.csv" download><span>webform.csv</span><span class="hint">web sign-up form export</span></a></li>
+    <li><a href="../vp-workshop/starter/data/email-invites.csv" download><span>email-invites.csv</span><span class="hint">email invite tool export</span></a></li>
+    <li><a href="../vp-workshop/starter/data/calendar-rsvps.csv" download><span>calendar-rsvps.csv</span><span class="hint">calendar RSVP export</span></a></li>
+    <li><a href="../vp-workshop/starter/data/notes.txt" download><span>notes.txt</span><span class="hint">quirks &amp; dedupe rule</span></a></li>
+  </ul>
+
+  <footer>Three exports of the same signup list. Reconcile them into one clean attendee list.</footer>
+</main>
+</body>
+</html>

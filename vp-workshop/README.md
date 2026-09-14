@@ -40,7 +40,7 @@ just-in-time interludes (see `presentation-vp/outline.md`).
 | - | Thin intro (3 slides: what it is, the promise, the chat-vs-Code table) | 3 | `presentation-vp/outline.md` |
 | 1 | Your first build (coffee budget, iterate by talking) | 13 | `cards/01-first-build.md` |
 | 2 | How it works (coworker, your files, teaching preferences, staying on track, control) | 10 | `cards/02-how-it-works.md` |
-| 3 | The real difference (fetch the messy data -> runs code -> interactive app -> reusable button) | 20 | `cards/03-real-difference.md` |
+| 3 | The real difference (browser-download messy signup exports -> runs code to reconcile 58 rows into 41 people -> interactive app with a merge-audit panel -> reusable button) | 20 | `cards/03-real-difference.md` |
 | 4 | Share it (regenerate the work as an HTML deck) | 6 | `cards/04-share-it.md` |
 | - | Wrap (where this fits in their week) | 2 | -- |
 
@@ -53,10 +53,11 @@ opens a brand-new **empty folder** in the desktop app (Code tab -> Select folder
 make a new folder). That's the whole setup -- nothing to download up front.
 
 The only download happens later, in **Segment 3**, and only when it's needed:
-Claude fetches the messy dataset (`jan.csv`, `feb.csv`, `mar.csv`, `notes.txt`)
-straight from the public repo into a `data/` folder (the paste prompt is in
-`cards/03-real-difference.md`). Segments 0-2 need no files -- those build prompts
-are self-contained.
+participants open their own browser (not Claude) and download the messy dataset
+(`webform.csv`, `email-invites.csv`, `calendar-rsvps.csv`, `notes.txt`) as a zip
+from a GitHub Pages link, then drop the resulting `data/` folder into their
+workshop folder (the instructions are in `cards/03-real-difference.md`). Segments
+0-2 need no files -- those build prompts are self-contained.
 
 No house-rules / `CLAUDE.md` file to manage: every build prompt already asks for
 "a single self-contained HTML file... show it to me," so the preview-pane behavior
@@ -69,15 +70,28 @@ Everything in `vp-workshop/` (this README, `cards/`, `presentation-vp/`,
 
 ## Getting the data onto each laptop (no git)
 
-**Primary path -- let Claude fetch it.** In Segment 3 the card's paste prompt
-points Claude at the public raw URLs and it downloads the four data files. One
-paste, deterministic, no account, nothing to hunt for. Requirements:
-`vp-workshop/` must be on `main` (URLs are
-`https://raw.githubusercontent.com/wojtyniakAQ/claude-code-workshop/main/vp-workshop/starter/data/...`)
-and the room must reach github.com. Verify both in your dry-run.
+**Primary path -- a browser download from GitHub Pages.** In Segment 3,
+participants open their own browser (not Claude) and go to
+`https://wojtyniakaq.github.io/claude-code-workshop/data/`, click **Download all
+(zip)**, unzip it, and drop the `data` folder into their workshop folder.
 
-**Fallback path -- a zip (offline-proof).** If the room's wifi or a firewall might
-block GitHub, email/Slack the data ahead of time -- no account needed. A prebuilt
+This has to be a browser download, not something Claude fetches. The Claude Code
+desktop app sandboxes Bash's network access, so if Claude tries to `curl` the
+files itself, it hits a `deny network-outbound` sandbox violation and fails --
+you'll see it come back as a curl exit 22 or a 403, and no amount of retrying
+fixes it, because the sandbox is blocking it on purpose. A browser is a separate
+process outside that sandbox entirely, so the same download that fails from
+Claude's Bash tool works instantly from Chrome or Safari. Don't try to talk
+Claude into fetching it "just this once" -- redirect participants to the browser
+instead.
+
+Requirements: `data/index.html` must be published on the repo's GitHub Pages
+site (built from `main`), and the room must reach `wojtyniakaq.github.io`.
+Verify both in your dry-run.
+
+**Fallback path -- an emailed zip (for a blocked-wifi room).** If the room's
+wifi or a firewall might block GitHub Pages, email/Slack the data ahead of time
+-- no account needed, no network required at all during the session. A prebuilt
 **`vp-workshop/data.zip`** is included (it unzips to a `data/` folder). If you
 change the dataset, regenerate it:
 
@@ -85,25 +99,30 @@ change the dataset, regenerate it:
 cd vp-workshop/starter && zip -r ../data.zip data -x '*.DS_Store'
 ```
 
-If you go the zip route, at Segment 3 tell participants: "skip the download prompt
--- unzip today's `data` folder into your workshop folder instead," then continue
-from the explore step.
+If you go the zip route, at Segment 3 tell participants: "skip the browser
+download -- unzip today's `data` folder (from the email/Slack message) into
+your workshop folder instead," then continue from the explore step.
 
 ## The Segment 3 dataset
 
-Three monthly exports that disagree the way real systems do: renamed columns
-(`play_count` vs `plays`, `date` vs `day`), three different date formats, March
-missing its first week, and a few `source=TEST` junk rows the notes say to ignore.
-Mild enough to reconcile cleanly on stage, real enough that a chat upload can't do
-it.
+Three signup exports for the same event, pulled from three different systems
+(`webform.csv`, `email-invites.csv`, `calendar-rsvps.csv`), plus a `notes.txt`
+from a colleague explaining the quirks and the dedupe rule. They disagree the
+way real systems do: different column names and casing, three different date
+formats, and -- the actual point of the exercise -- the same person shows up
+more than once under different spellings (nicknames vs full names, a typo'd
+email domain, inconsistent case, stray whitespace). A couple of rows are
+obvious junk (a test signup, a blank row) and don't count as people.
+
+58 raw rows go in; 41 real, deduplicated people come out. Mild enough to
+reconcile cleanly on stage, real enough that a chat upload -- which can only
+look at one file at a time -- can't do it.
 
 Regenerate it any time with:
 
 ```bash
 python vp-workshop/scripts/make_messy_data.py
 ```
-
-(Source data: `part3-abbey-road/data/streams.csv`, Jan-Mar 2025.)
 
 ## Before the session (do not skip)
 
@@ -139,9 +158,12 @@ python vp-workshop/scripts/make_messy_data.py
 Run the whole thing solo on a clean machine in the **desktop app** before game
 day. Confirm: the confetti and coffee-budget builds render in the preview with no
 manual steps; the live "remember this" preference request changes the next build;
-in **Segment 3 the data prompt downloads the four files** on the room's network
-(the likely failure point -- if github.com is blocked, switch to the zip); plan
-mode works; Claude actually runs code and reconciles the files; `/refresh-report`
-re-runs; and the finale deck flips with arrow keys. Time every segment and trim
-until the core fits inside 50 minutes, leaving 10 for questions and the inevitable
-hiccup.
+in **Segment 3 the browser download page at
+`https://wojtyniakaq.github.io/claude-code-workshop/data/` loads and its zip
+unzips to a `data` folder with the three CSVs and `notes.txt`** on the room's
+network (the likely failure point -- if GitHub Pages is blocked, switch to the
+emailed zip); plan mode works; Claude actually runs code and reconciles the 58
+rows down to 41 people, with a merge-audit panel that holds up under a "why did
+you merge these two?" challenge; `/rebuild-list` re-runs; and the finale deck
+flips with arrow keys. Time every segment and trim until the core fits inside 50
+minutes, leaving 10 for questions and the inevitable hiccup.

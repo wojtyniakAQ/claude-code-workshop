@@ -26,6 +26,6 @@ Prefer a one-pager? Ask for that instead:
 - For speed and wow, HTML wins.
 
 ## Why this beats redoing it in chat
-Your deck was built from the same `/refresh-report` pipeline you made in Step 3.
-Next month: drop in new files, press the button, regenerate the deck. A chat would
-start from a blank page every single time.
+Your deck was built from the same `/rebuild-list` pipeline you made in Step 3.
+Next time new exports land: drop them in, press the button, regenerate the deck. A
+chat would start from a blank page every single time.
