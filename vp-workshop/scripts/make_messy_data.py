@@ -15,14 +15,6 @@ Required numbers (quoted in the facilitator card and README -- do not drift):
   - calendar-rsvps.csv : 17 data rows
   - 58 raw rows total -> 41 distinct real people
 
-There is also a fourth export, late-signups.csv, written ONE LEVEL UP from the
-others (into vp-workshop/starter/, a sibling of data/, not inside it). It is
-deliberately outside data/ so Claude does not pick it up on the first pass and
-spoil the 41. In Segment 3e attendees drag it into data/ and re-run their
-/rebuild-list command to watch the count move:
-  - late-signups.csv   : 9 data rows (6 new people + 3 who merge into existing)
-  - 67 raw rows total -> 47 distinct real people
-
 Canonical dedupe rule (also stated in notes.txt): two rows are the same person
 when the email local-part matches after lowercasing and trimming, and the
 domain is any of sandboxaq.com, sandboxquantum.com or samdboxaq.com (a
@@ -43,8 +35,7 @@ import random
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
-STARTER_DIR = REPO_ROOT / "vp-workshop" / "starter"
-OUT_DIR = STARTER_DIR / "data"
+OUT_DIR = REPO_ROOT / "vp-workshop" / "starter" / "data"
 
 # Only used to shuffle row order within each file so the mess doesn't read as
 # hand-sorted by category. The dataset's content (rows, dupes, counts) is
@@ -55,7 +46,6 @@ RNG_SEED = 20260901
 WEBFORM_HEADER = ["full_name", "email", "team", "submitted_at"]
 EMAIL_HEADER = ["Name", "Email Address", "Department", "Responded"]
 CALENDAR_HEADER = ["attendee", "mail", "org", "rsvp_date"]
-LATE_HEADER = ["name", "email_address", "group", "signed_up"]
 
 # Each row is a plain 4-tuple matching its file's header, OR the string
 # constant below for the one row that's blank except for a stray comma.
@@ -166,29 +156,6 @@ CALENDAR_ROWS = [
     ("Bianca Ferrara", "bianca.ferrara@sandboxaq.com", "People", "4 Sep 2026"),
 ]
 
-# ---------------------------------------------------------------------------
-# late-signups.csv -- 9 rows, written OUTSIDE data/ (see module docstring).
-# 6 genuinely new people + 3 who are already on the list under a different
-# spelling, so the dedupe logic visibly fires again on the re-run.
-# ---------------------------------------------------------------------------
-LATE_ROWS = [
-    # Six people who are not in any of the first three exports: 41 -> 47.
-    ("Solveig Nyman", "solveig.nyman@sandboxaq.com", "Engineering", "2026-09-08"),
-    ("Idris Bello", "idris.bello@sandboxaq.com", "Marketing", "2026-09-08"),
-    ("Anneke Visser", "anneke.visser@sandboxaq.com", "Finance", "2026-09-09"),
-    ("Mateo Guzman", "mateo.guzman@sandboxaq.com", "", "2026-09-09"),
-    ("Hana Kowalski", "hana.kowalski@sandboxaq.com", "People", "2026-09-10"),
-    ("Theo Almeida", "theo.almeida@sandboxaq.com", "Data Science", "2026-09-10"),
-    # Three who already exist -- each re-uses a different one of the three
-    # mess types, so the merge panel has something interesting to show.
-    # Nickname + domain variant (same person as Bianca Ferrara).
-    ("Bea Ferrara", "bianca.ferrara@sandboxquantum.com", "People", "2026-09-08"),
-    # Initial + typo domain (same person as Kwame Mensah).
-    ("K. Mensah", "kwame.mensah@samdboxaq.com", "Sales", "2026-09-09"),
-    # ALL CAPS email (same person as Fiona Mackenzie).
-    ("Fiona Mackenzie", "FIONA.MACKENZIE@SANDBOXAQ.COM", "", "2026-09-10"),
-]
-
 NOTES_TEXT = """Notes from the data team (read me before using these files!)
 ===========================================================
 
@@ -228,8 +195,7 @@ to know before you reconcile them:
    (leading/trailing spaces, ALL CAPS addresses). Trim and lowercase before
    comparing emails.
 
-Once you've deduped these three exports correctly, you should land on 41
-distinct real people.
+Once you've deduped correctly, you should land on 41 distinct real people.
 """
 
 
@@ -257,10 +223,6 @@ def main() -> None:
     assert len(email_rows) == 19, f"email-invites.csv should have 19 rows, got {len(email_rows)}"
     assert len(calendar_rows) == 17, f"calendar-rsvps.csv should have 17 rows, got {len(calendar_rows)}"
 
-    late_rows = list(LATE_ROWS)
-    rng.shuffle(late_rows)
-    assert len(late_rows) == 9, f"late-signups.csv should have 9 rows, got {len(late_rows)}"
-
     OUT_DIR.mkdir(parents=True, exist_ok=True)
 
     _write_csv(OUT_DIR / "webform.csv", WEBFORM_HEADER, webform_rows)
@@ -268,12 +230,8 @@ def main() -> None:
     _write_csv(OUT_DIR / "calendar-rsvps.csv", CALENDAR_HEADER, calendar_rows)
     (OUT_DIR / "notes.txt").write_text(NOTES_TEXT)
 
-    # Deliberately a sibling of data/, not inside it -- see module docstring.
-    _write_csv(STARTER_DIR / "late-signups.csv", LATE_HEADER, late_rows)
-
     for name in ("webform.csv", "email-invites.csv", "calendar-rsvps.csv", "notes.txt"):
         print(f"wrote {OUT_DIR / name}")
-    print(f"wrote {STARTER_DIR / 'late-signups.csv'}")
 
 
 if __name__ == "__main__":
