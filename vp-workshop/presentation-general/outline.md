@@ -28,7 +28,7 @@ Two columns. Keep coming back to this all session.
 | One file at a time | A whole folder of mismatched files at once |
 | Writes an answer | Runs real code, and fixes its own mistakes |
 | A one-off in a chat bubble | Real files you keep and re-open |
-| Re-ask next month from scratch | A reusable button you press again |
+| Re-ask next month from scratch | A reusable command you run again |
 | Knows only what you paste | Plugs into your real systems |
 
 Then: "Let's go feel it." -> straight into Segment 0.

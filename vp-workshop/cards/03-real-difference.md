@@ -22,6 +22,10 @@ workshop folder. This is a normal browser download, so there's nothing for
 Claude to ask permission for -- you're just adding files to a folder it can
 already see.
 
+Ignore the **"Not yet"** box at the bottom of that page. There's a second file
+down there for later; grabbing it now puts the wrong number on your screen for
+the rest of this exercise.
+
 (If the wifi is being difficult, ask your facilitator for the backup zip.)
 
 ## 3b · Let Claude read the whole pile
@@ -78,21 +82,43 @@ That's not a guess you have to trust. It's an answer you can audit.
 
 **Chat hands you a picture. Claude Code hands you a working app.**
 
-## 3e · Turn it into a button you keep
+## 3e · Turn it into a command you keep
 
-> Now make this a button I can press to redo the whole reconciliation next
-> time new exports land in the `data` folder. Call it `/rebuild-list`.
+> Save this whole reconciliation as a custom slash command called
+> `rebuild-list`, so I can run it again later on whatever files are sitting in
+> the `data` folder at the time.
 
-(If Claude describes the button and asks whether to go ahead, just say "yes,
-create it" -- it's all one conversation.)
+(If Claude describes what it's about to create and asks whether to go ahead,
+just say "yes, create it" -- it's all one conversation.)
 
-Then run it:
+**There is no button to look for.** What you made is a *command*: type `/` in
+the message box and `rebuild-list` is now in the list, alongside the ones that
+shipped with the app. That's how you run it. It's saved in your project, so
+it's still there tomorrow.
+
+## 3f · Now prove the command actually does something
+
+More people signed up after those exports were pulled. Go back to the download
+page -- the **"Not yet"** box at the bottom is for now:
+
+> https://wojtyniakaq.github.io/claude-code-workshop/data/
+
+Download **`late-signups.csv`** and drag it into your `data` folder, alongside
+the other files. That's it, just move the file.
+
+Then run it -- type:
 
 > /rebuild-list
 
-Watch it redo the whole thing end to end. You didn't get a one-off list --
-you built a tool that lives in your project and runs again whenever you
-want.
+Watch the headcount go from **41 to 47**, and look at the merge panel again:
+three of the nine late signups weren't new people at all. One had signed up
+under a nickname, one through the system with the typo'd domain, and one with
+their email in capitals. Claude caught all three and merged them instead of
+double-counting.
+
+That's the whole point of a saved command. Next week you re-pull from the
+three systems, drop the fresh exports into `data`, run it again, and you get a
+current list without redoing any of the thinking.
 
 ## If something looks off
 

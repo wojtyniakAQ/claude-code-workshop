@@ -22,6 +22,7 @@
   --serif: "Source Serif 4", Georgia, "Times New Roman", Times, serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --mono: ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+  --danger: #B94A3B;
   --radius: 8px;
   --radius-lg: 12px;
   --shadow-md: 0 4px 14px rgba(20, 20, 19, 0.08);
@@ -150,6 +151,40 @@ ul.file-list a .hint {
   white-space: nowrap;
 }
 
+/* held-back file -- deliberately styled as a caution, not a call to action */
+.later {
+  margin-top: 34px;
+  padding: 18px 20px;
+  border: var(--border-width) dashed var(--border);
+  border-radius: var(--radius);
+  background: transparent;
+}
+.later h2 {
+  margin: 0 0 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--danger);
+}
+.later p {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+.later-link {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 14px;
+  color: var(--text-dim);
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.later-link:hover { color: var(--text); border-color: var(--text-dim); }
+
 footer {
   margin-top: 32px;
   font-size: 13px;
@@ -178,6 +213,15 @@ footer a { color: var(--accent-hover); }
     <li><a href="../vp-workshop/starter/data/calendar-rsvps.csv" download><span>calendar-rsvps.csv</span><span class="hint">calendar RSVP export</span></a></li>
     <li><a href="../vp-workshop/starter/data/notes.txt" download><span>notes.txt</span><span class="hint">quirks &amp; dedupe rule</span></a></li>
   </ul>
+
+  <section class="later">
+    <h2>Not yet &mdash; wait for step 3f</h2>
+    <p>
+      Your facilitator will tell you when. Downloading this early puts the wrong
+      number on your screen for the first half of the exercise.
+    </p>
+    <a class="later-link" href="../vp-workshop/starter/late-signups.csv" download>late-signups.csv</a>
+  </section>
 
   <footer>Three exports of the same signup list. Reconcile them into one clean attendee list.</footer>
 </main>

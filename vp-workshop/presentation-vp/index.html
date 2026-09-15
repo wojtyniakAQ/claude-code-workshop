@@ -170,6 +170,33 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
   color: var(--text);
 }
 
+/* ── slash-command mock: shows the command they just made, as the app
+      will show it back to them when they type "/" ── */
+.slash-demo > p { margin-bottom: 10px; }
+.slash-menu {
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  padding: 6px;
+  max-width: 660px;
+}
+.slash-menu .row-cmd {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: var(--accent-light);
+}
+.slash-menu .cmd {
+  font-family: var(--mono); font-weight: 600;
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: var(--accent-hover);
+}
+.slash-menu .desc {
+  font-size: clamp(12px, 1.3vw, 15px);
+  color: var(--text-dim);
+}
+
 /* ── big numeral (for the concept slides) ── */
 .numeral {
   font-family: var(--serif);
@@ -315,7 +342,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
           <tr><td>One file at a time</td><td class="code-col">A whole folder of mismatched files at once</td></tr>
           <tr><td>Writes an answer</td><td class="code-col">Runs real code, and fixes its own mistakes</td></tr>
           <tr><td>A one-off in a chat bubble</td><td class="code-col">Real files you keep and re-open</td></tr>
-          <tr><td>Re-ask next month from scratch</td><td class="code-col">A reusable button you press again</td></tr>
+          <tr><td>Re-ask next month from scratch</td><td class="code-col">A reusable command you run again</td></tr>
           <tr><td>Knows only what you paste</td><td class="code-col">Plugs into your real systems</td></tr>
         </tbody>
       </table>
@@ -432,7 +459,7 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
         <div class="prompt-label">Open this in your browser — not Claude</div>
         <div class="prompt-text" style="font-size:clamp(20px, 2.6vw, 32px); text-align:center;">https://wojtyniakaq.github.io/claude-code-workshop/data/</div>
       </div>
-      <p class="muted">Download the zip, unzip it, and drop the "data" folder into your workshop folder.</p>
+      <p class="muted">Download the zip, unzip it, and drop the "data" folder into your workshop folder. Ignore the "Not yet" box at the bottom of that page — that one's for later.</p>
       <div class="prompt-box">
         <div class="prompt-label">Then paste — let it read the whole pile</div>
         <div class="prompt-text">Look through everything in the data folder — three signup exports pulled from three different systems that don't quite agree (different column names, different date formats) plus a notes.txt explaining the quirks. Tell me in plain English what's in there and where they disagree.</div>
@@ -453,15 +480,22 @@ tbody td.code-col { color: var(--text); font-weight: 500; }
     </div>
   </section>
 
-  <!-- 14 · Build it, then keep it — run code + the reusable button -->
+  <!-- 14 · Build it, then keep it — run code + the reusable command -->
   <section class="slide">
     <div class="stack-lg">
       <h2>Build it — then keep it</h2>
       <p class="lede">Approve the plan, then watch it <strong>write and run real code</strong> to combine the files and build your app. When it's done, make it reusable:</p>
       <div class="prompt-box">
         <div class="prompt-label">Paste this</div>
-        <div class="prompt-text">Now make this a button I can press to rebuild the whole list any time new exports come in. Call it /rebuild-list.</div>
+        <div class="prompt-text">Save this whole reconciliation as a custom slash command called rebuild-list, so I can run it again later on whatever files are sitting in the data folder at the time.</div>
       </div>
+      <div class="slash-demo">
+        <p class="muted">No button to hunt for — what you made is a <strong>command</strong>. Type <strong>/</strong> in the message box and it's right there, saved in your project and still there next week.</p>
+        <div class="slash-menu">
+          <div class="row-cmd"><span class="cmd">/rebuild-list</span><span class="desc">redo the reconciliation from the data folder</span></div>
+        </div>
+      </div>
+      <p class="lede">Now grab <strong>late-signups.csv</strong> from the "Not yet" box, drag it into <em>data</em>, and run it. Watch <strong>41 become 47</strong> — three of the nine turn out to be people you already had.</p>
       <div class="callout">Chat hands you a picture. <strong>Claude Code hands you a working app.</strong></div>
     </div>
   </section>

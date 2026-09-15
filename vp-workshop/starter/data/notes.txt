@@ -37,4 +37,5 @@ to know before you reconcile them:
    (leading/trailing spaces, ALL CAPS addresses). Trim and lowercase before
    comparing emails.
 
-Once you've deduped correctly, you should land on 41 distinct real people.
+Once you've deduped these three exports correctly, you should land on 41
+distinct real people.

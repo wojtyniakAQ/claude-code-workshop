@@ -21,7 +21,7 @@ early, and keep pointing back to it:
 | One file at a time | A whole folder of mismatched files at once |
 | Writes an answer | Runs real code, and fixes its own mistakes by re-checking |
 | A one-off artifact in a chat bubble | Real files in your folder you keep and re-open |
-| You re-ask next month from scratch | A reusable button (`/command`) you press again |
+| You re-ask next month from scratch | A reusable command (`/rebuild-list`) you run again |
 | Knows only what you paste | Plugs into your real systems via connectors |
 
 "Drop a file, get a report" is the baseline we are beating, not the demo.
@@ -40,7 +40,7 @@ just-in-time interludes (see `presentation-vp/outline.md`).
 | - | Thin intro (3 slides: what it is, the promise, the chat-vs-Code table) | 3 | `presentation-vp/outline.md` |
 | 1 | Your first build (coffee budget, iterate by talking) | 13 | `cards/01-first-build.md` |
 | 2 | How it works (coworker, your files, teaching preferences, staying on track, control) | 10 | `cards/02-how-it-works.md` |
-| 3 | The real difference (browser-download messy signup exports -> runs code to reconcile 58 rows into 41 people -> interactive app with a merge-audit panel -> reusable button) | 20 | `cards/03-real-difference.md` |
+| 3 | The real difference (browser-download messy signup exports -> runs code to reconcile 58 rows into 41 people -> interactive app with a merge-audit panel -> reusable command) | 20 | `cards/03-real-difference.md` |
 | 4 | Share it (regenerate the work as an HTML deck) | 6 | `cards/04-share-it.md` |
 | - | Wrap (where this fits in their week) | 2 | -- |
 
@@ -74,6 +74,12 @@ Everything in `vp-workshop/` (this README, `cards/`, `presentation-vp/`,
 participants open their own browser (not Claude) and go to
 `https://wojtyniakaq.github.io/claude-code-workshop/data/`, click **Download all
 (zip)**, unzip it, and drop the `data` folder into their workshop folder.
+
+The page also carries a separate, deliberately discouraging **"Not yet"** box
+holding `late-signups.csv`, which is only for Segment 3f. Tell the room to
+ignore it until you say so: if it lands in `data/` early, the first
+reconciliation returns 47 instead of 41 and the number on your slide is wrong.
+This is the one instruction in the session worth repeating out loud.
 
 This has to be a browser download, not something Claude fetches. The Claude Code
 desktop app sandboxes Bash's network access, so if Claude tries to `curl` the
@@ -114,7 +120,11 @@ more than once under different spellings (nicknames vs full names, a typo'd
 email domain, inconsistent case, stray whitespace). A couple of rows are
 obvious junk (a test signup, a blank row) and don't count as people.
 
-58 raw rows go in; 41 real, deduplicated people come out. Mild enough to
+58 raw rows go in; 41 real, deduplicated people come out. A fourth export,
+`late-signups.csv` (9 rows), is downloaded separately and added in Segment 3f: six of its
+rows are new people and three are existing ones under a nickname, the typo'd
+domain and an ALL-CAPS address, so running `/rebuild-list` moves the count to
+**47** and the merge panel visibly fires again. Mild enough to
 reconcile cleanly on stage, real enough that a chat upload -- which can only
 look at one file at a time -- can't do it.
 
@@ -164,6 +174,8 @@ unzips to a `data` folder with the three CSVs and `notes.txt`** on the room's
 network (the likely failure point -- if GitHub Pages is blocked, switch to the
 emailed zip); plan mode works; Claude actually runs code and reconciles the 58
 rows down to 41 people, with a merge-audit panel that holds up under a "why did
-you merge these two?" challenge; `/rebuild-list` re-runs; and the finale deck
+you merge these two?" challenge; downloading `late-signups.csv` from the
+"Not yet" box, dropping it into `data/` and running `/rebuild-list` takes 41
+to 47; and the finale deck
 flips with arrow keys. Time every segment and trim until the core fits inside 50
 minutes, leaving 10 for questions and the inevitable hiccup.
